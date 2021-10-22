@@ -1,0 +1,964 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+span:hover {
+  cursor: default;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+/*--------------------*/
+body {
+  font-family: Montserrat;
+}
+
+header {
+  background: #1a1a1a;
+  position: relative;
+}
+header .container {
+  max-width: 750px;
+}
+
+.menu__icon {
+  display: none;
+  z-index: 6;
+  position: absolute;
+  right: 250px;
+  top: calc(50% - 12px);
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+.menu__icon span, .menu__icon::before, .menu__icon::after {
+  left: 0;
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background-color: #eaa124;
+}
+.menu__icon::before, .menu__icon::after {
+  content: "";
+}
+.menu__icon::before {
+  top: 0;
+}
+.menu__icon::after {
+  bottom: 0;
+}
+.menu__icon span {
+  top: 35%;
+  -webkit-transform: scale(1) translate(0, 50%);
+          transform: scale(1) translate(0, 50%);
+}
+.menu__icon._active span {
+  -webkit-transform: scale(0) translate(0, 50%);
+          transform: scale(0) translate(0, 50%);
+}
+.menu__icon._active::before {
+  top: 50%;
+  -webkit-transform: rotate(-45deg) translate(0, -50%);
+          transform: rotate(-45deg) translate(0, -50%);
+}
+.menu__icon._active::after {
+  bottom: 50%;
+  -webkit-transform: rotate(45deg) translate(0, 50%);
+          transform: rotate(45deg) translate(0, 50%);
+}
+
+.burger__menu {
+  display: none;
+  position: absolute;
+  width: calc(100% + 20px);
+  top: 100%;
+  left: -10px;
+  background-color: #fff;
+  padding: 10px 10px 15px;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transform: translateY(-50%) scaleY(0);
+          transform: translateY(-50%) scaleY(0);
+}
+.burger__menu li {
+  margin: 0 0 15px;
+}
+.burger__menu li:last-child {
+  margin: 0;
+}
+.burger__menu li a {
+  font-size: 18px;
+  line-height: 17px;
+  color: #000000;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  text-transform: capitalize;
+}
+.burger__menu li a:hover {
+  color: #eaa124;
+}
+.burger__menu._active {
+  -webkit-transform: translateY(0) scaleY(1);
+          transform: translateY(0) scaleY(1);
+}
+
+.header__logo {
+  display: block;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(50% - 150px);
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1e1e1e;
+  background: linear-gradient(-70deg, transparent 35px, #1e1e1e 0) bottom right, linear-gradient(70deg, transparent 35px, #1e1e1e 0) bottom left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.1));
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.header__logo img {
+  width: 50%;
+}
+.header__logo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.first_row {
+  padding: 8px 0;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.first_row__item {
+  color: #a7a7a7;
+}
+.first_row__item span {
+  font-size: 10px;
+  line-height: 12px;
+  display: inline-block;
+  margin: 0 12px 0 0;
+}
+.first_row__item span:last-child {
+  margin: 0;
+}
+
+.first_row__social {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_social {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header_social li {
+  margin: 0 10px 0 0;
+}
+.header_social li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header_twitter {
+  width: 12px;
+  height: 9px;
+}
+.header_twitter a {
+  background: url("../img/twitter.svg") 50% 50%/contain no-repeat;
+}
+.header_twitter a:hover {
+  background: url("../img/twitter-hover.svg") 50% 50%/contain no-repeat;
+}
+
+.header_tiktok {
+  width: 10px;
+  height: 12px;
+}
+.header_tiktok a {
+  background: url("../img/tiktok.svg") 50% 50%/contain no-repeat;
+}
+.header_tiktok a:hover {
+  background: url("../img/tiktok-hover.svg") 50% 50%/contain no-repeat;
+}
+
+.header_youtube {
+  width: 11px;
+  height: 7px;
+}
+.header_youtube a {
+  background: url("../img/youtube.svg") 0 0/contain no-repeat;
+}
+.header_youtube a:hover {
+  background: url("../img/youtube-hover.svg") 50% 50%/contain no-repeat;
+}
+
+.header_little_bot {
+  width: 12px;
+  height: 12px;
+}
+.header_little_bot a {
+  background: url("../img/little-bot.svg") 50% 50%/contain no-repeat;
+}
+.header_little_bot a:hover {
+  background: url("../img/little-bot-hover.svg") 50% 50%/contain no-repeat;
+}
+
+.first_row__slogan {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.header_navigation {
+  padding: 17px 0;
+}
+
+.header__list {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__block {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__item {
+  display: inline-block;
+  margin: 0 60px 0 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+}
+.header__item:last-child {
+  margin: 0;
+}
+.header__item:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  bottom: -17px;
+  left: 0;
+  background-color: #67552a;
+  width: 100%;
+  height: 4px;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+.header__item:hover:before {
+  opacity: 1;
+}
+
+.first_screen {
+  padding: 170px 0 240px;
+  background: url("../img/main-image.jpg") 0 50%/cover no-repeat;
+  color: #ffffff;
+}
+
+.first_screen__title {
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 55px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.first_screen__subtitle {
+  margin: 0 0 40px;
+  padding: 0 0 18px;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  position: relative;
+}
+.first_screen__subtitle:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 6px;
+  bottom: 0;
+  left: calc(50% - 40px);
+  background: #fff;
+  background: linear-gradient(-55deg, transparent 10px, #fff 0) bottom right, linear-gradient(55deg, transparent 10px, #fff 0) bottom left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.playfree {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 240px;
+  height: 50px;
+  margin: 0 auto 37px;
+  background: -webkit-gradient(linear, left top, right top, from(#67552a), color-stop(#7a6228), to(#67552a));
+  background: linear-gradient(90deg, #67552a, #7a6228, #67552a);
+  border-radius: 3px;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.playfree:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.first_screen__row {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.first_screen__item {
+  display: block;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  margin: 0 30px 0 0;
+}
+.first_screen__item:last-child {
+  margin: 0;
+}
+
+.x_box {
+  width: 30px;
+  height: 30px;
+  background: url("../img/x-box.svg") 50% 50%/cover no-repeat;
+}
+.x_box:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+}
+
+.appstore {
+  width: 30px;
+  height: 30px;
+  background: url("../img/appstore.svg") 50% 50%/cover no-repeat;
+}
+.appstore:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+}
+
+.playstation {
+  width: 38.28px;
+  height: 30px;
+  background: url("../img/playstation.svg") 50% 50%/cover no-repeat;
+}
+.playstation:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+}
+
+.android {
+  width: 25.38px;
+  height: 30px;
+  background: url("../img/android.svg") 50% 50%/cover no-repeat;
+}
+.android:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+}
+
+.steam {
+  width: 30px;
+  height: 30px;
+  background: url("../img/steam.svg") 50% 50%/cover no-repeat;
+}
+.steam:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+}
+
+.epic {
+  width: 25.85px;
+  height: 30px;
+  background: url("../img/epic.svg") 50% 50%/cover no-repeat;
+}
+.epic:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+}
+
+.games {
+  background: #1a1a1a;
+}
+
+.games__slider {
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.games__slider .slick-list {
+  overflow: hidden;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  position: relative;
+}
+.games__slider .slick-track {
+  min-height: 500px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.games__slider .slick-slide {
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.games__slider .slick-center {
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  z-index: 2;
+}
+.games__slider .slick-arrow {
+  font-size: 0;
+  position: absolute;
+  bottom: 0;
+}
+.games__slider .slick-arrow.slick-prev:before {
+  content: "prev";
+  color: #fff;
+  font-size: 12px;
+  background-color: #1a1a1a;
+  left: calc(50% - 100px);
+}
+.games__item {
+  height: 100%;
+  margin: 0 45px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.games__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.games__item span {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.games__item img {
+  width: 100%;
+}
+
+.video {
+  background: repeating-linear-gradient(45deg, #1e1e1e, #1e1e1e 5px, #1a1a1a 5px, #1a1a1a 10px);
+  position: relative;
+  padding: 55px 0;
+}
+.video .content__video {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video .play {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 65px);
+  left: calc(50% - 65px);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: url("../img/play.svg") 55% 50%/30% no-repeat;
+  border: 4px solid #fff;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.video .play:after {
+  content: "play";
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  position: absolute;
+  right: -70%;
+  top: calc(50% - 12px);
+}
+.video .play:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.video .play._playActive {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+.video .container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.how_to_play {
+  padding: 88px 0 0;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.title {
+  padding: 0 0 24px;
+  margin: 0 0 88px;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+.title:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 6px;
+  bottom: 0;
+  left: calc(50% - 40px);
+  background: #fff;
+  background: linear-gradient(-55deg, transparent 10px, #fff 0) bottom right, linear-gradient(55deg, transparent 10px, #fff 0) bottom left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+.title span {
+  color: #67552a;
+}
+
+.how_to_play__avatar {
+  padding: 20px 0 0;
+  background: url("../img/create-av-back.jpg") 50% 50%/cover no-repeat;
+}
+
+.how_to_play__row {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how_to_play__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.how_to_play__item p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #cccccc;
+}
+.how_to_play__item img {
+  width: 50%;
+}
+
+.item_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.how_to_play__subtitle {
+  margin: 0 0 25px;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 43px;
+  text-transform: uppercase;
+}
+
+.how_to_play__attribute {
+  padding: 40px 0;
+  background: url("../img/attribute-back.jpg") 50% 50%/cover no-repeat;
+}
+
+.how_to_play__favorit {
+  padding: 100px 0;
+  background: url("../img/favorite-sport.jpg") 50% 30%/cover no-repeat;
+}
+.how_to_play__favorit p {
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #cccccc;
+}
+
+.why {
+  padding: 100px 0 0;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.why__row {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.why__item {
+  text-align: center;
+  padding: 64px 20px 0;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #2c2c37;
+  border-radius: 15px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+.why__item img {
+  margin: 0 0 10px;
+}
+.why__item:hover {
+  background: #202027;
+  border: none;
+}
+.why__item span {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.where {
+  padding: 120px 0 170px;
+  background: #1a1a1a;
+  color: #fff;
+}
+.where a {
+  display: inline-block;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.where a:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0));
+          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0));
+}
+
+.where__row {
+  max-width: 780px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.where__item {
+  padding: 25px 40px;
+  border-right: 1px solid #fff;
+}
+.where__item:last-child {
+  border: none;
+}
+
+.where__x_box {
+  width: 50px;
+  height: 50px;
+}
+.where__x_box:hover {
+  background: url("../img/x-box-hover.svg") 50% 50%/cover no-repeat;
+}
+
+.where__appstore {
+  width: 50px;
+  height: 50px;
+}
+.where__appstore:hover {
+  background: url("../img/appstore-hover.svg") 50% 50%/cover no-repeat;
+}
+
+.where__playstation {
+  width: 63px;
+  height: 50px;
+}
+.where__playstation:hover {
+  background: url("../img/playstation-hover.svg") 50% 50%/cover no-repeat;
+}
+
+.where__android {
+  width: 42px;
+  height: 50px;
+}
+.where__android:hover {
+  background: url("../img/android-hover.svg") 50% 50%/cover no-repeat;
+}
+
+.where__steam {
+  width: 50px;
+  height: 50px;
+}
+.where__steam:hover {
+  background: url("../img/steam-hover.svg") 50% 50%/cover no-repeat;
+}
+
+.where__epic {
+  width: 43px;
+  height: 50px;
+}
+.where__epic:hover {
+  background: url("../img/epic-hover.svg") 50% 50%/cover no-repeat;
+}

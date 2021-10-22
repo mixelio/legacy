@@ -1,0 +1,782 @@
+// обнуление
+@import "./nullstyle.scss";
+
+// шрифты
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// скошеные углы
+@mixin beveled-corners($bg, $br: $tl, $bl: $tr, $ra, $la) {
+  background: $bg;
+  background: linear-gradient($ra, transparent $br, $bg 0) bottom right,
+    linear-gradient($la, transparent $bl, $bg 0) bottom left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: Montserrat;
+}
+
+header {
+  background: #1a1a1a;
+  position: relative;
+  .container {
+    max-width: 750px;
+  }
+}
+
+.menu__icon {
+  display: none;
+  z-index: 6;
+  position: absolute;
+  right: 250px;
+  top: calc(50% - 12px);
+  //transform: translate(-30px, 50px);
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  span,
+  &::before,
+  &::after {
+    left: 0;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #eaa124;
+  }
+  &::before,
+  &::after {
+    content: "";
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  span {
+    top: 35%;
+    transform: scale(1) translate(0, 50%);
+  }
+  &._active {
+    span {
+      transform: scale(0) translate(0, 50%);
+    }
+    &::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+    &::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+  }
+}
+
+.burger__menu {
+  display: none;
+  position: absolute;
+  width: calc(100% + 20px);
+  top: 100%;
+  left: -10px;
+  background-color: #fff;
+
+  padding: 10px 10px 15px;
+  li {
+    margin: 0 0 15px;
+    &:last-child {
+      margin: 0;
+    }
+    a {
+      font-size: 18px;
+      line-height: 17px;
+      color: #000000;
+      transition-duration: 300ms;
+      text-transform: capitalize;
+      &:hover {
+        color: #eaa124;
+      }
+    }
+  }
+  transition-duration: 300ms;
+  transform: translateY(-50%) scaleY(0);
+  &._active {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(50% - 150px);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  @include beveled-corners(#1e1e1e, 35px, 35px, -70deg, 70deg);
+  filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.1));
+  img {
+    width: 50%;
+  }
+  transition: all 500ms ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.first_row {
+  padding: 8px 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first_row__item {
+  color: #a7a7a7;
+  span {
+    font-size: 10px;
+    line-height: 12px;
+    display: inline-block;
+    margin: 0 12px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.first_row__social {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+
+.header_social {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  li {
+    margin: 0 10px 0 0;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.header_twitter {
+  width: 12px;
+  height: 9px;
+  a {
+    background: url("../img/twitter.svg") 50% 50% / contain no-repeat;
+    &:hover {
+      background: url("../img/twitter-hover.svg") 50% 50% / contain no-repeat;
+    }
+  }
+}
+
+.header_tiktok {
+  width: 10px;
+  height: 12px;
+  a {
+    background: url("../img/tiktok.svg") 50% 50% / contain no-repeat;
+    &:hover {
+      background: url("../img/tiktok-hover.svg") 50% 50% / contain no-repeat;
+    }
+  }
+}
+
+.header_youtube {
+  width: 11px;
+  height: 7px;
+  a {
+    background: url("../img/youtube.svg") 0 0 / contain no-repeat;
+    &:hover {
+      background: url("../img/youtube-hover.svg") 50% 50% / contain no-repeat;
+    }
+  }
+}
+
+.header_little_bot {
+  width: 12px;
+  height: 12px;
+
+  a {
+    background: url("../img/little-bot.svg") 50% 50% / contain no-repeat;
+    &:hover {
+      background: url("../img/little-bot-hover.svg") 50% 50% / contain no-repeat;
+    }
+  }
+}
+
+.first_row__slogan {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.header_navigation {
+  padding: 17px 0;
+}
+
+.header__list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__block {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+
+.header__item {
+  display: inline-block;
+  margin: 0 60px 0 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+
+  &:last-child {
+    margin: 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    bottom: -17px;
+    left: 0;
+    background-color: #67552a;
+    width: 100%;
+    height: 4px;
+    transition-duration: 400ms;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.first_screen {
+  padding: 170px 0 240px;
+  background: url("../img/main-image.jpg") 0 50% / cover no-repeat;
+  color: #ffffff;
+}
+
+.container {
+}
+
+.first_screen__title {
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 55px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.first_screen__subtitle {
+  margin: 0 0 40px;
+  padding: 0 0 18px;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 6px;
+    bottom: 0;
+    left: calc(50% - 40px);
+    @include beveled-corners(#fff, 10px, 10px, -55deg, 55deg);
+  }
+}
+
+.playfree {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 50px;
+  margin: 0 auto 37px;
+  background: linear-gradient(90deg, #67552a, #7a6228, #67552a);
+  border-radius: 3px;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 300ms ease-in;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(#fff, 0.3);
+  }
+}
+
+.first_screen__row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first_screen__item {
+  display: block;
+  transition: all 200ms ease-out;
+  margin: 0 30px 0 0;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.x_box {
+  width: 30px;
+  height: 30px;
+  background: url("../img/x-box.svg") 50% 50% / cover no-repeat;
+  &:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+  }
+}
+
+.appstore {
+  width: 30px;
+  height: 30px;
+  background: url("../img/appstore.svg") 50% 50% / cover no-repeat;
+  &:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+  }
+}
+
+.playstation {
+  width: 38.28px;
+  height: 30px;
+  background: url("../img/playstation.svg") 50% 50% / cover no-repeat;
+  &:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+  }
+}
+
+.android {
+  width: 25.38px;
+  height: 30px;
+  background: url("../img/android.svg") 50% 50% / cover no-repeat;
+  &:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+  }
+}
+
+.steam {
+  width: 30px;
+  height: 30px;
+  background: url("../img/steam.svg") 50% 50% / cover no-repeat;
+  &:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+  }
+}
+
+.epic {
+  width: 25.85px;
+  height: 30px;
+  background: url("../img/epic.svg") 50% 50% / cover no-repeat;
+  &:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
+  }
+}
+
+.games {
+  background: #1a1a1a;
+}
+
+.games__slider {
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+  transition: all 200ms ease-out;
+  .slick-list {
+    overflow: hidden;
+    transition: all 200ms ease-out;
+    position: relative;
+  }
+  .slick-track {
+    min-height: 500px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 200ms ease-out;
+  }
+  .slick-slide {
+    transition: all 1000ms ease-in-out;
+    transform: scale(1);
+  }
+  .slick-center {
+    transition: all 1000ms ease-in-out;
+    transform: scale(2);
+    z-index: 2;
+  }
+
+  .slick-arrow {
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .slick-arrow.slick-prev {
+    &:before {
+      content: "prev";
+      color: #fff;
+      font-size: 12px;
+      background-color: #1a1a1a;
+      left: calc(50% - 100px);
+    }
+  }
+
+  .slick-arrow.slick-next {
+  }
+}
+
+.games__item {
+  height: 100%;
+  margin: 0 45px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  span {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #ffffff;
+    transform: translateY(-50%);
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.video {
+  background: repeating-linear-gradient(
+    45deg,
+    #1e1e1e,
+    #1e1e1e 5px,
+    #1a1a1a 5px,
+    #1a1a1a 10px
+  );
+  position: relative;
+  padding: 55px 0;
+  .content__video {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .play {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 65px);
+    left: calc(50% - 65px);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: url("../img/play.svg") 55% 50% / 30% no-repeat;
+    border: 4px solid #fff;
+    &:after {
+      content: "play";
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      text-transform: uppercase;
+      position: absolute;
+      right: -70%;
+      top: calc(50% - 12px);
+    }
+    transition: all 300ms ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &._playActive {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.how_to_play {
+  padding: 88px 0 0;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.title {
+  padding: 0 0 24px;
+  margin: 0 0 88px;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 6px;
+    bottom: 0;
+    left: calc(50% - 40px);
+    @include beveled-corners(#fff, 10px, 10px, -55deg, 55deg);
+  }
+  span {
+    color: #67552a;
+  }
+}
+
+.how_to_play__avatar {
+  padding: 20px 0 0;
+  background: url("../img/create-av-back.jpg") 50% 50% / cover no-repeat;
+}
+
+.how_to_play__row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.how_to_play__item {
+  flex: 1;
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #cccccc;
+  }
+  img {
+    width: 50%;
+  }
+}
+
+.item_image {
+  display: flex;
+  justify-content: center;
+}
+.how_to_play__subtitle {
+  margin: 0 0 25px;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 43px;
+  text-transform: uppercase;
+}
+
+.how_to_play__attribute {
+  padding: 40px 0;
+  background: url("../img/attribute-back.jpg") 50% 50% / cover no-repeat;
+}
+
+.how_to_play__favorit {
+  padding: 100px 0;
+  background: url("../img/favorite-sport.jpg") 50% 30% / cover no-repeat;
+  p {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #cccccc;
+  }
+}
+
+.why {
+  padding: 100px 0 0;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.container {
+}
+
+.title {
+}
+
+.why__row {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.why__item {
+  text-align: center;
+  padding: 64px 20px 0;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #2c2c37;
+  border-radius: 15px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  img {
+    margin: 0 0 10px;
+  }
+  &:hover {
+    background: #202027;
+    border: none;
+  }
+  span {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+}
+
+.where {
+  padding: 120px 0 170px;
+  background: #1a1a1a;
+  color: #fff;
+  a {
+    display: inline-block;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      transform: scale(1);
+      filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0));
+    }
+  }
+}
+
+.title {
+}
+
+.where__row {
+  max-width: 780px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.where__item {
+  padding: 25px 40px;
+  border-right: 1px solid #fff;
+  &:last-child {
+    border: none;
+  }
+}
+
+.where__x_box {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    background: url("../img/x-box-hover.svg") 50% 50% / cover no-repeat;
+  }
+}
+
+.x_box {
+}
+
+.where__appstore {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    background: url("../img/appstore-hover.svg") 50% 50% / cover no-repeat;
+  }
+}
+
+.appstore {
+}
+
+.where__playstation {
+  width: 63px;
+  height: 50px;
+  &:hover {
+    background: url("../img/playstation-hover.svg") 50% 50% / cover no-repeat;
+  }
+}
+
+.playstation {
+}
+
+.where__android {
+  width: 42px;
+  height: 50px;
+  &:hover {
+    background: url("../img/android-hover.svg") 50% 50% / cover no-repeat;
+  }
+}
+
+.android {
+}
+
+.where__steam {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    background: url("../img/steam-hover.svg") 50% 50% / cover no-repeat;
+  }
+}
+
+.steam {
+}
+
+.where__epic {
+  width: 43px;
+  height: 50px;
+  &:hover {
+    background: url("../img/epic-hover.svg") 50% 50% / cover no-repeat;
+  }
+}
+
+.epic {
+}
