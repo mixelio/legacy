@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <title>Legacy</title>
   </head>
   <body>
@@ -71,34 +73,36 @@
         </div>
       </section>
       <section class="games">
-        <div class="games__slider">
-          <div class="games__item">
-            <a href="#"
-              ><img src="./img/slide-1.jpg" alt="" /><span
-                >Battle Royale</span
-              ></a
-            >
-          </div>
-          <div class="games__item">
-            <a href="#"
-              ><img src="./img/slide-1.jpg" alt="" /><span
-                >Battle Royale</span
-              ></a
-            >
-          </div>
-          <div class="games__item">
-            <a href="#"
-              ><img src="./img/slide-1.jpg" alt="" /><span
-                >Battle Royale</span
-              ></a
-            >
-          </div>
-          <div class="games__item">
-            <a href="#"
-              ><img src="./img/slide-1.jpg" alt="" /><span
-                >Battle Royale</span
-              ></a
-            >
+        <div class="container">
+          <div class="swiper games__swiper games__slider">
+            <!-- Обязательная оболочка -->
+            <div class="swiper-wrapper">
+              <!-- Слайды -->
+              <div class="swiper-slide games__item">
+                <a href="#"
+                  ><img src="./img/slide-1.jpg" alt="" /><span
+                    >Battle Royale</span
+                  ></a
+                >
+              </div>
+              <div class="swiper-slide games__item">
+                <a href="#"
+                  ><img src="./img/slide-2.jpg" alt="" /><span
+                    >Battle Royale</span
+                  ></a
+                >
+              </div>
+              <div class="swiper-slide games__item">
+                <a href="#"
+                  ><img src="./img/slide-3.jpg" alt="" /><span
+                    >Battle Royale</span
+                  ></a
+                >
+              </div>
+            </div>
+            <!-- Стрелки -->
+            <div class="swiper-button-prev games-button-prev"></div>
+            <div class="swiper-button-next games-button-next"></div>
           </div>
         </div>
       </section>
@@ -228,16 +232,224 @@
           </div>
         </div>
       </section>
+      <section class="update">
+        <div class="container">
+          <h3 class="title">SET UPDATES ON <span>LEGACY</span></h3>
+          <div class="swiper update__swiper">
+            <!-- Обязательная оболочка -->
+            <div class="swiper-wrapper">
+              <!-- Слайды -->
+              <div class="swiper-slide">
+                <div class="update__column">
+                  <div class="update__item update__img">
+                    <img src="./img/small-slider-img1.jpg" alt="" />
+                    <a href="" class="guide"><span>guide</span></a>
+                    <a href="" class="start"><span>start</span></a>
+                  </div>
+                  <div class="update__item">
+                    <p class="date">jul 15</p>
+                    <p class="update__text">
+                      How to play this great game? Guide for begginers
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="update__column">
+                  <div class="update__item update__img">
+                    <img src="./img/small-slider-img2.jpg" alt="" />
+                    <a href="" class="guide"><span>guide</span></a>
+                    <a href="" class="start"><span>start</span></a>
+                  </div>
+                  <div class="update__item">
+                    <p class="date">jul 15</p>
+                    <p class="update__text">
+                      How to play this great game? Guide for begginers
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="update__column">
+                  <div class="update__item update__img">
+                    <img src="./img/small-slider-img3.jpg" alt="" />
+                    <a href="" class="guide"><span>guide</span></a>
+                    <a href="" class="start"><span>start</span></a>
+                  </div>
+                  <div class="update__item">
+                    <p class="date">jul 15</p>
+                    <p class="update__text">
+                      How to play this great game? Guide for begginers
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="update__column">
+                  <div class="update__item update__img">
+                    <img src="./img/small-slider-img2.jpg" alt="" />
+                    <a href="" class="guide"><span>guide</span></a>
+                    <a href="" class="start"><span>start</span></a>
+                  </div>
+                  <div class="update__item">
+                    <p class="date">jul 15</p>
+                    <p class="update__text">
+                      How to play this great game? Guide for begginers
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Пагинация (точки) -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Стрелки -->
+          </div>
+          <div class="swiper-button-prev arrow-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
       <section class="next_level">
         <div class="container">
           <div class="next_level__row">
             <div class="next_level__item">
-              <h3 class="title">NEXT LEVEL OF <span>CROSSPLAY</span> GAMES</h3>
+              <h3 class="title">
+                <span class="title__tag"><span>#</span>LEGENDS</span>NEXT LEVEL
+                OF <span>CROSSPLAY</span> GAMES
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
             </div>
-            <div class="next_level__item"></div>
+            <div class="next_level__item">
+              <div class="next_level__subrow">
+                <div class="next_level__subitem">
+                  <a href="" class="next_level__x_box x_box"></a>
+                </div>
+                <div class="next_level__subitem">
+                  <a href="" class="next_level__appstore appstore"></a>
+                </div>
+              </div>
+              <div class="next_level__subrow">
+                <div class="next_level__subitem">
+                  <a href="" class="next_level__playstation playstation"></a>
+                </div>
+                <div class="next_level__subitem">
+                  <a href="" class="next_level__android android"></a>
+                </div>
+              </div>
+              <div class="next_level__subrow">
+                <div class="next_level__subitem">
+                  <a href="" class="next_level__steam steam"></a>
+                </div>
+                <div class="next_level__subitem">
+                  <a href="" class="next_level__epic epic"></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <section class="tech_specs">
+        <div class="container">
+          <h3 class="title">TECH SPEcs</h3>
+          <div class="tech_specs__row">
+            <div class="tech_specs__item">
+              <h5>MINIMUM:</h5>
+              <p>
+                <span>ОС:</span> Windows 7 SP1 64-bit or Windows 8.1 64-bit or
+                Windows 10 64-bit <br /><span>CPU:</span> Intel Core i5 or
+                equivalent <br /><span>RAM:</span> 4 GB ОЗУ <br /><span
+                  >Video card:</span
+                >
+                NVIDIA® GeForce® GTX 550 or ATI™ Radeon™ HD 6XXX or higher
+                <br /><span>DirectX:</span> Версии 11 Disk <br /><span
+                  >space:</span
+                >
+                60 GB <br /><span>Extra:</span> Minimum requirements may change
+                during development.
+              </p>
+            </div>
+            <div class="tech_specs__item">
+              <h5>RECOMMENDED:</h5>
+              <p>
+                <span>ОС:</span> Windows 7 SP1 64-bit or Windows 8.1 64-bit or
+                Windows 10 64-bit <br /><span>CPU:</span> Intel Core i5 or
+                equivalent <br /><span>RAM:</span> 4 GB ОЗУ <br /><span
+                  >Video card:</span
+                >
+                NVIDIA® GeForce® GTX 550 or ATI™ Radeon™ HD 6XXX or higher
+                <br /><span>DirectX:</span> Версии 11 Disk <br /><span
+                  >space:</span
+                >
+                60 GB <br /><span>Extra:</span> Minimum requirements may change
+                during development.
+              </p>
+            </div>
+          </div>
+          <div class="tech_specs__follow">
+            <h6>Follow us on <span>socials</span></h6>
+            <p class="tech_specs__subtext">With notifications on!</p>
+            <ul class="tech_specs__follow_row">
+              <li class="tech_specs__follow_item tech_specs__twitter">
+                <a href=""></a>
+              </li>
+              <li class="tech_specs__follow_item tech_specs__tiktok">
+                <a href=""></a>
+              </li>
+              <li class="tech_specs__follow_item tech_specs__youtube">
+                <a href=""></a>
+              </li>
+              <li class="tech_specs__follow_item tech_specs__little_bot">
+                <a href=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__item">
+              <a href="./index.html" class="footer__logo"
+                ><img src="./img/logo.svg" alt=""
+              /></a>
+            </div>
+            <div class="footer__item">
+              <div class="footer__subrow">
+                <nav class="footer__naviration">
+                  <ul class="footer__list">
+                    <li class="footer__subitem"><a href="">blog</a></li>
+                    <li class="footer__subitem"><a href="">Partners</a></li>
+                    <li class="footer__subitem"><a href="">Support</a></li>
+                    <li class="footer__subitem"><a href="">Socials</a></li>
+                    <li class="footer__subitem"><a href="">Contact Us</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__social_row">
+                <span>follow us on:</span>
+                <ul class="header_social">
+                  <li class="header_twitter"><a href="#"></a></li>
+                  <li class="header_tiktok"><a href="#"></a></li>
+                  <li class="header_youtube"><a href="#"></a></li>
+                  <li class="header_little_bot"><a href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <span class="footer__copirate"
+            >©2021 Legacy, Inc. All Rights Reserved.</span
+          >
+        </div>
+      </footer>
     </main>
     <!-- Подключил jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -246,6 +458,8 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+    <!-- Подключение слайдера swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- Подключил файл скриптов -->
     <script src="js/script.js"></script>
   </body>
