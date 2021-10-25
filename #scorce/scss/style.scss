@@ -693,9 +693,9 @@ header {
   display: -ms-flex;
   display: flex;
   flex-direction: column;
+  //justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  position: relative;
   img {
     margin: 0 0 10px;
   }
