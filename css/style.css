@@ -924,7 +924,7 @@ header .container {
 }
 .why__item:hover {
   background: #202027;
-  border: none;
+  border: 1px solid #202027;
 }
 .why__item span {
   font-weight: bold;
