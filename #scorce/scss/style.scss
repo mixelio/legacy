@@ -46,7 +46,9 @@ header {
   background: #1a1a1a;
   position: relative;
   .container {
-    max-width: 750px;
+    border-left: 1px solid #323232;
+    border-right: 1px solid #323232;
+    padding: 0;
   }
 }
 
@@ -161,12 +163,14 @@ header {
 }
 
 .first_row {
-  padding: 8px 0;
+  width: 100%;
+  padding: 9px 150px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #323232;
 }
 
 .first_row__item {
@@ -212,20 +216,7 @@ header {
 .header_twitter {
   width: 12px;
   height: 9px;
-  .header_link {
-    opacity: 1;
-  }
-  .header_link_hower {
-    opacity: 0;
-  }
-  &:hover {
-    & .header_link {
-      opacity: 0;
-    }
-    & .header_link_hower {
-      opacity: 1;
-    }
-  }
+  @include slowhover;
 }
 
 .header_tiktok {
@@ -243,13 +234,7 @@ header {
 .header_little_bot {
   width: 12px;
   height: 12px;
-
-  a {
-    background: url("../img/little-bot.svg") 50% 50% / contain no-repeat;
-    &:hover {
-      background: url("../img/little-bot-hover.svg") 50% 50% / contain no-repeat;
-    }
-  }
+  @include slowhover;
 }
 
 .first_row__slogan {
@@ -258,7 +243,7 @@ header {
 }
 
 .header_navigation {
-  padding: 17px 0;
+  padding: 17px 150px;
 }
 
 .header__list {
@@ -294,15 +279,17 @@ header {
     position: absolute;
     display: inline-block;
     opacity: 0;
+    transform: scaleX(0);
     bottom: -17px;
     left: 0;
     background-color: #67552a;
     width: 100%;
     height: 4px;
-    transition-duration: 400ms;
+    transition: all 200ms ease-in-out;
   }
   &:hover:before {
     opacity: 1;
+    transform: scaleX(1);
   }
 }
 
@@ -470,8 +457,8 @@ header {
   position: relative;
   z-index: 3;
   overflow: hidden;
-  transform: translateY(-50px);
-  padding: 50px 0;
+  transform: translateY(-90px);
+  padding: 90px 0;
   .container {
     max-width: 740px;
   }
@@ -495,29 +482,23 @@ header {
   transform: translateY(-50px);
   transition: all 300ms ease-in;
   z-index: 6;
-  //max-height: 500px;
   .swiper-slide {
     transition: all 300ms ease-in;
     transform: translateY(0px);
     width: auto;
     &.swiper-slide-active {
-      //margin: 0 45px;
       width: 100%;
-      transform: translateY(-50px);
+      transform: translateY(-90px);
       span {
         opacity: 1;
       }
     }
     &.swiper-slide-prev {
-      // padding: 0 90px;
-      // transform: translateX(-50%);
       span {
         opacity: 0;
       }
     }
     &.swiper-slide-next {
-      // padding: 0 90px;
-      // transform: translateX(50%);
       span {
         opacity: 0;
       }

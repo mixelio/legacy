@@ -20,6 +20,7 @@ new Swiper(".update__swiper", {
 new Swiper(".games__swiper", {
   loop: true,
   slidesPerView: 1,
+  speed: 700,
   spaceBetween: 90,
   centeredSlides: true,
   loopedSlides: 3,
