@@ -568,73 +568,67 @@ header .container {
 .first_screen__item:last-child {
   margin: 0;
 }
-
-.x_box {
+.first_screen__item .x_box {
   width: 30px;
   height: 30px;
   background: url("../img/x-box.svg") 50% 50%/cover no-repeat;
 }
-.x_box:hover {
+.first_screen__item .x_box:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
           filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
 }
-
-.appstore {
+.first_screen__item .appstore {
   width: 30px;
   height: 30px;
   background: url("../img/appstore.svg") 50% 50%/cover no-repeat;
 }
-.appstore:hover {
+.first_screen__item .appstore:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
           filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
 }
-
-.playstation {
+.first_screen__item .playstation {
   width: 38.28px;
   height: 30px;
   background: url("../img/playstation.svg") 50% 50%/cover no-repeat;
 }
-.playstation:hover {
+.first_screen__item .playstation:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
           filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
 }
-
-.android {
+.first_screen__item .android {
   width: 25.38px;
   height: 30px;
   background: url("../img/android.svg") 50% 50%/cover no-repeat;
 }
-.android:hover {
+.first_screen__item .android:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
           filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
 }
-
-.steam {
+.first_screen__item .steam {
   width: 30px;
   height: 30px;
   background: url("../img/steam.svg") 50% 50%/cover no-repeat;
 }
-.steam:hover {
+.first_screen__item .steam:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
           filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
 }
-
-.epic {
+.first_screen__item .epic {
   width: 25.85px;
   height: 30px;
   background: url("../img/epic.svg") 50% 50%/cover no-repeat;
 }
-.epic:hover {
+.first_screen__item .epic:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
   -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
@@ -647,10 +641,10 @@ header .container {
   overflow: hidden;
   -webkit-transform: translateY(-90px);
           transform: translateY(-90px);
-  padding: 90px 0;
+  padding: 90px 0 0;
 }
 .games .container {
-  max-width: 740px;
+  max-width: 840px;
 }
 .games .swiper {
   overflow: visible;
@@ -735,12 +729,18 @@ header .container {
   background: repeating-linear-gradient(45deg, #1e1e1e, #1e1e1e 5px, #1a1a1a 5px, #1a1a1a 10px);
   position: relative;
   padding: 55px 0;
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
 }
 .video .content__video {
   display: block;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.video iframe {
+  width: 100%;
+  height: 500px;
 }
 .video .play {
   position: absolute;
@@ -781,7 +781,6 @@ header .container {
 }
 
 .how_to_play {
-  padding: 88px 0 0;
   background: #1a1a1a;
   color: #fff;
 }
@@ -936,7 +935,9 @@ header .container {
   color: #fff;
 }
 .where a {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  height: 100%;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -962,59 +963,132 @@ header .container {
 }
 
 .where__item {
-  padding: 25px 40px;
+  width: 129px;
+  height: 90px;
   border-right: 1px solid #fff;
+  position: relative;
+}
+.where__item img {
+  position: absolute;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 .where__item:last-child {
   border: none;
 }
 
-.where__x_box {
+.where__x_box img {
   width: 50px;
   height: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
 }
-.where__x_box:hover {
-  background: url("../img/x-box-hover.svg") 50% 50%/cover no-repeat;
+.where__x_box .where_link {
+  opacity: 1;
+}
+.where__x_box .where_link_hower {
+  opacity: 0;
+}
+.where__x_box:hover .where_link {
+  opacity: 0;
+}
+.where__x_box:hover .where_link_hower {
+  opacity: 1;
 }
 
-.where__appstore {
+.where__appstore img {
   width: 50px;
   height: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
 }
-.where__appstore:hover {
-  background: url("../img/appstore-hover.svg") 50% 50%/cover no-repeat;
+.where__appstore .where_link {
+  opacity: 1;
+}
+.where__appstore .where_link_hower {
+  opacity: 0;
+}
+.where__appstore:hover .where_link {
+  opacity: 0;
+}
+.where__appstore:hover .where_link_hower {
+  opacity: 1;
 }
 
-.where__playstation {
+.where__playstation img {
   width: 63px;
   height: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 32.5px);
 }
-.where__playstation:hover {
-  background: url("../img/playstation-hover.svg") 50% 50%/cover no-repeat;
+.where__playstation .where_link {
+  opacity: 1;
+}
+.where__playstation .where_link_hower {
+  opacity: 0;
+}
+.where__playstation:hover .where_link {
+  opacity: 0;
+}
+.where__playstation:hover .where_link_hower {
+  opacity: 1;
 }
 
-.where__android {
+.where__android img {
   width: 42px;
   height: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 21px);
 }
-.where__android:hover {
-  background: url("../img/android-hover.svg") 50% 50%/cover no-repeat;
+.where__android .where_link {
+  opacity: 1;
+}
+.where__android .where_link_hower {
+  opacity: 0;
+}
+.where__android:hover .where_link {
+  opacity: 0;
+}
+.where__android:hover .where_link_hower {
+  opacity: 1;
 }
 
-.where__steam {
+.where__steam img {
   width: 50px;
   height: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
 }
-.where__steam:hover {
-  background: url("../img/steam-hover.svg") 50% 50%/cover no-repeat;
+.where__steam .where_link {
+  opacity: 1;
+}
+.where__steam .where_link_hower {
+  opacity: 0;
+}
+.where__steam:hover .where_link {
+  opacity: 0;
+}
+.where__steam:hover .where_link_hower {
+  opacity: 1;
 }
 
-.where__epic {
+.where__epic img {
   width: 43px;
   height: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 21.5px);
 }
-.where__epic:hover {
-  background: url("../img/epic-hover.svg") 50% 50%/cover no-repeat;
+.where__epic .where_link {
+  opacity: 1;
+}
+.where__epic .where_link_hower {
+  opacity: 0;
+}
+.where__epic:hover .where_link {
+  opacity: 0;
+}
+.where__epic:hover .where_link_hower {
+  opacity: 1;
 }
 
 .update {
@@ -1186,11 +1260,17 @@ header .container {
   background: #1a1a1a;
   color: #fff;
 }
+.next_level img {
+  position: absolute;
+  top: calc(50% - 40px);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
 .next_level a {
-  display: inline-block;
-  height: 80px;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 .next_level a:hover {
   -webkit-transform: scale(1);
@@ -1257,8 +1337,6 @@ header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1272,53 +1350,116 @@ header .container {
 }
 
 .next_level__subitem {
-  padding: 25px 30px;
-  width: 50%;
+  height: 130px;
+  width: 140px;
 }
 .next_level__subitem:nth-child(odd) {
   border-right: 1px solid #2f2f2f;
 }
 
-.next_level__x_box {
+.next_level__x_box img {
   width: 80px;
+  left: calc(50% - 40px);
 }
-.next_level__x_box:hover {
-  background: url("../img/x-box-hover.svg") 50% 50%/cover no-repeat;
+.next_level__x_box .next_link {
+  opacity: 1;
+}
+.next_level__x_box .next_link_hower {
+  opacity: 0;
+}
+.next_level__x_box:hover .next_link {
+  opacity: 0;
+}
+.next_level__x_box:hover .next_link_hower {
+  opacity: 1;
 }
 
-.next_level__appstore {
+.next_level__appstore img {
   width: 80px;
+  left: calc(50% - 40px);
 }
-.next_level__appstore:hover {
-  background: url("../img/appstore-hover.svg") 50% 50%/cover no-repeat;
+.next_level__appstore .next_link {
+  opacity: 1;
+}
+.next_level__appstore .next_link_hower {
+  opacity: 0;
+}
+.next_level__appstore:hover .next_link {
+  opacity: 0;
+}
+.next_level__appstore:hover .next_link_hower {
+  opacity: 1;
 }
 
-.next_level__playstation {
+.next_level__playstation img {
   width: 103px;
+  left: calc(50% - 51.5px);
 }
-.next_level__playstation:hover {
-  background: url("../img/playstation-hover.svg") 50% 50%/cover no-repeat;
+.next_level__playstation .next_link {
+  opacity: 1;
+}
+.next_level__playstation .next_link_hower {
+  opacity: 0;
+}
+.next_level__playstation:hover .next_link {
+  opacity: 0;
+}
+.next_level__playstation:hover .next_link_hower {
+  opacity: 1;
 }
 
-.next_level__android {
+.next_level__android img {
   width: 68px;
+  left: calc(50% - 34px);
 }
-.next_level__android:hover {
-  background: url("../img/android-hover.svg") 50% 50%/cover no-repeat;
+.next_level__android .next_link {
+  opacity: 1;
+}
+.next_level__android .next_link_hower {
+  opacity: 0;
+}
+.next_level__android:hover .next_link {
+  opacity: 0;
+}
+.next_level__android:hover .next_link_hower {
+  opacity: 1;
 }
 
-.next_level__steam {
+.next_level__steam img {
   width: 80px;
+  left: calc(50% - 40px);
 }
-.next_level__steam:hover {
-  background: url("../img/steam-hover.svg") 50% 50%/cover no-repeat;
+.next_level__steam .next_link {
+  opacity: 1;
+}
+.next_level__steam .next_link_hower {
+  opacity: 0;
+}
+.next_level__steam:hover .next_link {
+  opacity: 0;
+}
+.next_level__steam:hover .next_link_hower {
+  opacity: 1;
 }
 
 .next_level__epic {
   width: 69px;
 }
-.next_level__epic:hover {
-  background: url("../img/epic-hover.svg") 50% 50%/cover no-repeat;
+.next_level__epic img {
+  width: 69px;
+  left: calc(50% - 34.5px);
+}
+.next_level__epic .next_link {
+  opacity: 1;
+}
+.next_level__epic .next_link_hower {
+  opacity: 0;
+}
+.next_level__epic:hover .next_link {
+  opacity: 0;
+}
+.next_level__epic:hover .next_link_hower {
+  opacity: 1;
 }
 
 .tech_specs {
@@ -1380,6 +1521,11 @@ header .container {
   text-transform: capitalize;
 }
 
+.tech_specs__follow img {
+  position: absolute;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
 .tech_specs__follow h6 {
   margin: 0 0 7px;
   font-weight: bold;
@@ -1392,7 +1538,10 @@ header .container {
   color: #67552a;
 }
 .tech_specs__follow a {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .tech_specs__subtext {
@@ -1403,7 +1552,7 @@ header .container {
 }
 
 .tech_specs__follow_row {
-  max-width: 522px;
+  max-width: calc(124px * 4 + 5px);
   margin: 0 auto;
   display: -ms-flex;
   display: -webkit-box;
@@ -1420,52 +1569,88 @@ header .container {
 }
 
 .tech_specs__follow_item {
-  height: 100%;
-  padding: 30px 40px;
+  height: 110px;
+  width: 124px;
   border-right: 1px solid #ffffff;
 }
 .tech_specs__follow_item:last-child {
   border: none;
 }
 
-.tech_specs__twitter a {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background: url("../img/twitter.svg") 50% 50%/contain no-repeat;
-}
-.tech_specs__twitter a:hover {
-  background: url("../img/twitter-hover.svg") 50% 50%/contain no-repeat;
-}
-
-.tech_specs__tiktok a {
-  display: inline-block;
-  width: 44px;
-  height: 50px;
-  background: url("../img/tiktok.svg") 50% 50%/contain no-repeat;
-}
-.tech_specs__tiktok a:hover {
-  background: url("../img/tiktok-hover.svg") 50% 50%/contain no-repeat;
-}
-
-.tech_specs__youtube a {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background: url("../img/youtube.svg") 50% 50%/contain no-repeat;
-}
-.tech_specs__youtube a:hover {
-  background: url("../img/youtube-hover.svg") 50% 50%/contain no-repeat;
-}
-
-.tech_specs__little_bot a {
-  display: inline-block;
-  width: 50px;
+.tech_specs__twitter img {
   height: 40px;
-  background: url("../img/little-bot.svg") 50% 50%/contain no-repeat;
+  width: 50px;
+  top: calc(50% - 20px);
+  left: calc(50% - 25px);
 }
-.tech_specs__little_bot a:hover {
-  background: url("../img/little-bot-hover.svg") 50% 50%/contain no-repeat;
+.tech_specs__twitter .follow_link {
+  opacity: 1;
+}
+.tech_specs__twitter .follow_link_hower {
+  opacity: 0;
+}
+.tech_specs__twitter:hover .follow_link {
+  opacity: 0;
+}
+.tech_specs__twitter:hover .follow_link_hower {
+  opacity: 1;
+}
+
+.tech_specs__tiktok img {
+  height: 50px;
+  width: 44px;
+  top: calc(50% - 25px);
+  left: calc(50% - 22px);
+}
+.tech_specs__tiktok .follow_link {
+  opacity: 1;
+}
+.tech_specs__tiktok .follow_link_hower {
+  opacity: 0;
+}
+.tech_specs__tiktok:hover .follow_link {
+  opacity: 0;
+}
+.tech_specs__tiktok:hover .follow_link_hower {
+  opacity: 1;
+}
+
+.tech_specs__youtube img {
+  height: 34px;
+  width: 50px;
+  top: calc(50% - 17px);
+  left: calc(50% - 25px);
+}
+.tech_specs__youtube .follow_link {
+  opacity: 1;
+}
+.tech_specs__youtube .follow_link_hower {
+  opacity: 0;
+}
+.tech_specs__youtube:hover .follow_link {
+  opacity: 0;
+}
+.tech_specs__youtube:hover .follow_link_hower {
+  opacity: 1;
+}
+
+.tech_specs__little_bot img {
+  height: 50px;
+  width: 50px;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+}
+.tech_specs__little_bot .follow_link {
+  opacity: 1;
+}
+.tech_specs__little_bot .follow_link_hower {
+  opacity: 0;
+}
+.tech_specs__little_bot:hover .follow_link {
+  opacity: 0;
+}
+.tech_specs__little_bot:hover .follow_link_hower {
+  opacity: 1;
 }
 
 footer {
@@ -1539,6 +1724,17 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.footer__social_row img {
+  position: absolute;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.footer__social_row a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 .footer__social_row span {
   display: inline-block;

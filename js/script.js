@@ -24,6 +24,9 @@ new Swiper(".games__swiper", {
   spaceBetween: 90,
   centeredSlides: true,
   loopedSlides: 3,
+  // autoplay: {
+  //   delay: 3000
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
