@@ -20,6 +20,23 @@
   background-repeat: no-repeat;
 }
 
+@mixin slowhover {
+  .header_link {
+    opacity: 1;
+  }
+  .header_link_hower {
+    opacity: 0;
+  }
+  &:hover {
+    & .header_link {
+      opacity: 0;
+    }
+    & .header_link_hower {
+      opacity: 1;
+    }
+  }
+}
+
 body {
   font-family: Montserrat;
   background: #1a1a1a;
@@ -183,6 +200,11 @@ header {
       display: block;
       width: 100%;
       height: 100%;
+      position: relative;
+      img {
+        position: absolute;
+        transition: all 200ms ease-in-out;
+      }
     }
   }
 }
@@ -190,10 +212,18 @@ header {
 .header_twitter {
   width: 12px;
   height: 9px;
-  a {
-    background: url("../img/twitter.svg") 50% 50% / contain no-repeat;
-    &:hover {
-      background: url("../img/twitter-hover.svg") 50% 50% / contain no-repeat;
+  .header_link {
+    opacity: 1;
+  }
+  .header_link_hower {
+    opacity: 0;
+  }
+  &:hover {
+    & .header_link {
+      opacity: 0;
+    }
+    & .header_link_hower {
+      opacity: 1;
     }
   }
 }
@@ -201,23 +231,13 @@ header {
 .header_tiktok {
   width: 10px;
   height: 12px;
-  a {
-    background: url("../img/tiktok.svg") 50% 50% / contain no-repeat;
-    &:hover {
-      background: url("../img/tiktok-hover.svg") 50% 50% / contain no-repeat;
-    }
-  }
+  @include slowhover;
 }
 
 .header_youtube {
   width: 11px;
   height: 7px;
-  a {
-    background: url("../img/youtube.svg") 0 0 / contain no-repeat;
-    &:hover {
-      background: url("../img/youtube-hover.svg") 50% 50% / contain no-repeat;
-    }
-  }
+  @include slowhover;
 }
 
 .header_little_bot {

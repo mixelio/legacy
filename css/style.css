@@ -305,39 +305,63 @@ header .container {
   display: block;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+.header_social li a img {
+  position: absolute;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .header_twitter {
   width: 12px;
   height: 9px;
 }
-.header_twitter a {
-  background: url("../img/twitter.svg") 50% 50%/contain no-repeat;
+.header_twitter .header_link {
+  opacity: 1;
 }
-.header_twitter a:hover {
-  background: url("../img/twitter-hover.svg") 50% 50%/contain no-repeat;
+.header_twitter .header_link_hower {
+  opacity: 0;
+}
+.header_twitter:hover .header_link {
+  opacity: 0;
+}
+.header_twitter:hover .header_link_hower {
+  opacity: 1;
 }
 
 .header_tiktok {
   width: 10px;
   height: 12px;
 }
-.header_tiktok a {
-  background: url("../img/tiktok.svg") 50% 50%/contain no-repeat;
+.header_tiktok .header_link {
+  opacity: 1;
 }
-.header_tiktok a:hover {
-  background: url("../img/tiktok-hover.svg") 50% 50%/contain no-repeat;
+.header_tiktok .header_link_hower {
+  opacity: 0;
+}
+.header_tiktok:hover .header_link {
+  opacity: 0;
+}
+.header_tiktok:hover .header_link_hower {
+  opacity: 1;
 }
 
 .header_youtube {
   width: 11px;
   height: 7px;
 }
-.header_youtube a {
-  background: url("../img/youtube.svg") 0 0/contain no-repeat;
+.header_youtube .header_link {
+  opacity: 1;
 }
-.header_youtube a:hover {
-  background: url("../img/youtube-hover.svg") 50% 50%/contain no-repeat;
+.header_youtube .header_link_hower {
+  opacity: 0;
+}
+.header_youtube:hover .header_link {
+  opacity: 0;
+}
+.header_youtube:hover .header_link_hower {
+  opacity: 1;
 }
 
 .header_little_bot {
