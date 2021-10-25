@@ -13,6 +13,14 @@
   background-repeat: no-repeat;
 }
 
+@mixin arrow-corners($bg, $tl, $tr, $ra, $la) {
+  background: $bg;
+  background: linear-gradient($ra, transparent $br, $bg 0) bottom right,
+    linear-gradient($la, transparent $bl, $bg 0) bottom left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
 @mixin paralilepiped($bg, $br, $tl, $ra, $la) {
   background: linear-gradient($ra, transparent $br, $bg 0) bottom right,
     linear-gradient($la, transparent $bl, $bg 0) top left;
@@ -107,8 +115,8 @@ header {
   display: none;
   z-index: 6;
   position: absolute;
-  right: 250px;
-  top: calc(50% - 12px);
+  right: 20px;
+  top: 20px;
   //transform: translate(-30px, 50px);
   width: 30px;
   height: 24px;
@@ -121,7 +129,7 @@ header {
     height: 15%;
     width: 100%;
     transition: all 0.3s ease 0s;
-    background-color: #eaa124;
+    background-color: #fff;
   }
   &::before,
   &::after {
@@ -129,9 +137,13 @@ header {
   }
   &::before {
     top: 0;
+    width: 50%;
   }
   &::after {
+    left: auto;
+    right: 0;
     bottom: 0;
+    width: 50%;
   }
   span {
     top: 35%;
@@ -139,15 +151,20 @@ header {
   }
   &._active {
     span {
-      transform: scale(0) translate(0, 50%);
+      width: 50%;
+      left: 25%;
+      //transform: scale(0) translate(0, 50%);
     }
     &::before {
-      top: 50%;
-      transform: rotate(-45deg) translate(0, -50%);
+      left: 45%;
+      width: 10%;
+      //top: 50%;
+      //  transform: rotate(-45deg) translate(0, -50%);
     }
     &::after {
-      bottom: 50%;
-      transform: rotate(45deg) translate(0, 50%);
+      width: 100%;
+      //  bottom: 50%;
+      //  transform: rotate(45deg) translate(0, 50%);
     }
   }
 }
@@ -600,10 +617,7 @@ header {
     width: 100%;
     object-fit: cover;
   }
-  iframe {
-    width: 100%;
-    height: 500px;
-  }
+
   .play {
     position: absolute;
     display: inline-block;
@@ -681,10 +695,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .how_to_play__item {
   flex: 1;
+
   p {
     font-size: 16px;
     line-height: 20px;
@@ -698,6 +714,12 @@ header {
 .item_image {
   display: flex;
   justify-content: center;
+  .avatar {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+  }
 }
 .how_to_play__subtitle {
   margin: 0 0 25px;
@@ -1081,7 +1103,6 @@ header {
 
 .next_level__item {
   text-align: left;
-
   &:last-child {
     flex: 1 1 160%;
     margin: 0 0 0 38px;
@@ -1171,9 +1192,9 @@ header {
     position: absolute;
     display: inline-block;
     background: rgba(#262836, 0.4);
-    top: calc(50px + 40px + 24px + 55px);
+    top: calc(50px + 40px + 14px + 55px);
     left: 0;
-    height: 20px;
+    height: 40px;
     width: 100%;
   }
 }
@@ -1196,7 +1217,7 @@ header {
   }
   h5 {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 20px;
     margin: 0 0 37px;
     position: relative;
@@ -1388,4 +1409,90 @@ footer {
   font-weight: 300;
   font-size: 10px;
   line-height: 12px;
+}
+
+@media (max-width: 1100px) {
+  header {
+    .container {
+      margin: 0 20px;
+    }
+  }
+  .first_row {
+    padding: 9px 110px;
+  }
+  .header_navigation {
+    padding: 17px 110px;
+  }
+  .games {
+    .container {
+      max-width: 740px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .first_row {
+    padding: 9px 60px;
+  }
+  .header_navigation {
+    padding: 17px 60px;
+  }
+  .games {
+    .container {
+      max-width: 620px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .first_row {
+    padding: 9px 15px;
+  }
+  .header_navigation {
+    padding: 17px 15px;
+  }
+  .games {
+    .container {
+      max-width: 520px;
+    }
+  }
+  .footer__subitem {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu__icon {
+    display: block;
+  }
+  .how_to_play__row {
+  }
+  .how_to_play__item {
+    p {
+      padding: 0 0 30px;
+    }
+    img {
+      width: 60%;
+    }
+  }
+  .next_level {
+    .title {
+      font-size: 34px;
+      line-height: 44px;
+      padding: 0 0 0 34px;
+    }
+    .title__tag {
+      top: 42%;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+  .burger__menu {
+    display: block;
+  }
+  header {
+    .container {
+      display: none;
+    }
+  }
 }

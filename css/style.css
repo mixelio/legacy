@@ -137,8 +137,8 @@ header .container {
   display: none;
   z-index: 6;
   position: absolute;
-  right: 250px;
-  top: calc(50% - 12px);
+  right: 20px;
+  top: 20px;
   width: 30px;
   height: 24px;
   cursor: pointer;
@@ -150,16 +150,20 @@ header .container {
   width: 100%;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background-color: #eaa124;
+  background-color: #fff;
 }
 .menu__icon::before, .menu__icon::after {
   content: "";
 }
 .menu__icon::before {
   top: 0;
+  width: 50%;
 }
 .menu__icon::after {
+  left: auto;
+  right: 0;
   bottom: 0;
+  width: 50%;
 }
 .menu__icon span {
   top: 35%;
@@ -167,18 +171,15 @@ header .container {
           transform: scale(1) translate(0, 50%);
 }
 .menu__icon._active span {
-  -webkit-transform: scale(0) translate(0, 50%);
-          transform: scale(0) translate(0, 50%);
+  width: 50%;
+  left: 25%;
 }
 .menu__icon._active::before {
-  top: 50%;
-  -webkit-transform: rotate(-45deg) translate(0, -50%);
-          transform: rotate(-45deg) translate(0, -50%);
+  left: 45%;
+  width: 10%;
 }
 .menu__icon._active::after {
-  bottom: 50%;
-  -webkit-transform: rotate(45deg) translate(0, 50%);
-          transform: rotate(45deg) translate(0, 50%);
+  width: 100%;
 }
 
 .burger__menu {
@@ -738,10 +739,6 @@ header .container {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.video iframe {
-  width: 100%;
-  height: 500px;
-}
 .video .play {
   position: absolute;
   display: inline-block;
@@ -828,6 +825,7 @@ header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .how_to_play__item {
@@ -851,6 +849,12 @@ header .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.item_image .avatar {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: auto;
 }
 
 .how_to_play__subtitle {
@@ -1476,9 +1480,9 @@ header .container {
   position: absolute;
   display: inline-block;
   background: rgba(38, 40, 54, 0.4);
-  top: calc(50px + 40px + 24px + 55px);
+  top: calc(50px + 40px + 14px + 55px);
   left: 0;
-  height: 20px;
+  height: 40px;
   width: 100%;
 }
 
@@ -1506,7 +1510,7 @@ header .container {
 }
 .tech_specs__item h5 {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   margin: 0 0 37px;
   position: relative;
@@ -1745,4 +1749,83 @@ footer {
   font-weight: 300;
   font-size: 10px;
   line-height: 12px;
+}
+
+@media (max-width: 1100px) {
+  header .container {
+    margin: 0 20px;
+  }
+
+  .first_row {
+    padding: 9px 110px;
+  }
+
+  .header_navigation {
+    padding: 17px 110px;
+  }
+
+  .games .container {
+    max-width: 740px;
+  }
+}
+@media (max-width: 1100px) {
+  .first_row {
+    padding: 9px 60px;
+  }
+
+  .header_navigation {
+    padding: 17px 60px;
+  }
+
+  .games .container {
+    max-width: 620px;
+  }
+}
+@media (max-width: 900px) {
+  .first_row {
+    padding: 9px 15px;
+  }
+
+  .header_navigation {
+    padding: 17px 15px;
+  }
+
+  .games .container {
+    max-width: 520px;
+  }
+
+  .footer__subitem {
+    margin: 0 20px 0 0;
+  }
+}
+@media (max-width: 800px) {
+  .menu__icon {
+    display: block;
+  }
+
+  .how_to_play__item p {
+    padding: 0 0 30px;
+  }
+  .how_to_play__item img {
+    width: 60%;
+  }
+
+  .next_level .title {
+    font-size: 34px;
+    line-height: 44px;
+    padding: 0 0 0 34px;
+  }
+  .next_level .title__tag {
+    top: 42%;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .burger__menu {
+    display: block;
+  }
+
+  header .container {
+    display: none;
+  }
 }

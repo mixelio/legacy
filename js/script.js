@@ -14,7 +14,13 @@ new Swiper(".update__swiper", {
     prevEl: ".swiper-button-prev"
   },
   slidesPerView: 3,
-  spaceBetween: 70
+  spaceBetween: 70,
+  breakpoints: {
+    800: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    }
+  }
 });
 
 new Swiper(".games__swiper", {
@@ -24,27 +30,15 @@ new Swiper(".games__swiper", {
   spaceBetween: 90,
   centeredSlides: true,
   loopedSlides: 3,
-  // autoplay: {
-  //   delay: 3000
-  // },
+  autoplay: {
+    delay: 3000
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
     hideOnClick: !0
   }
 });
-
-// $(document).ready(function() {
-//   $(".games__slider").slick({
-//     arrows: true,
-//     slidesToShow: 3,
-//     infinite: true,
-//     speed: 1000,
-//     dots: false,
-//     centerMode: true
-//     //autoplay: true
-//   });
-// });
 
 const play = document.querySelector(".play");
 const video = document.querySelector(".content__video");
