@@ -915,6 +915,7 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 50px;
+  position: relative;
 }
 .why__item img {
   margin: 0 0 10px;
