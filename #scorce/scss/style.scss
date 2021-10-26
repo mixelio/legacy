@@ -1647,6 +1647,18 @@ footer {
   .header__logo {
     width: 50%;
   }
+
+  .first_screen__row {
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .first_screen__item {
+    margin: 0;
+  }
+
   .next_level {
     padding: 120px 0 60px;
   }
@@ -1681,5 +1693,42 @@ footer {
   .first_screen__title {
     font-size: 35px;
     line-height: 45px;
+  }
+  .title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .next_level .title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .next_level .title__tag {
+    top: 42%;
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .tech_specs__follow_row {
+    flex-wrap: wrap;
+  }
+  .tech_specs__follow_item {
+    height: 110px;
+    width: 50%;
+    border: 1px solid #ffffff;
+  }
+  .tech_specs__follow_item:last-child {
+    border: 1px solid #ffffff;
+  }
+  .footer__subitem {
+    margin: 0 10px 0 0;
+  }
+  .item_image .avatar {
+    height: auto;
+    width: 100%;
+  }
+  .footer__naviration a {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8d8c8c;
   }
 }

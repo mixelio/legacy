@@ -7,7 +7,6 @@ new Swiper(".update__swiper", {
     el: ".swiper-pagination",
     clickable: true
   },
-
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
@@ -44,16 +43,6 @@ new Swiper(".games__swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
     hideOnClick: !0
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    500: {
-      slidesPerView: 3,
-      spaceBetween: 40
-    }
   }
 });
 
