@@ -16,9 +16,12 @@ new Swiper(".update__swiper", {
   slidesPerView: 3,
   spaceBetween: 70,
   breakpoints: {
-    800: {
+    500: {
       slidesPerView: 2,
       spaceBetween: 40
+    },
+    850: {
+      slidesPerView: 3
     }
   }
 });
@@ -55,11 +58,13 @@ if (!playActive) {
 
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".burger__menu");
+const logo = document.querySelector(".header__logo");
 
 if (iconMenu) {
   iconMenu.addEventListener("click", function(e) {
     document.body.classList.toggle("_lock");
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
+    logo.classList.toggle("_active");
   });
 }

@@ -132,13 +132,64 @@ header .container {
   border-right: 1px solid #323232;
   padding: 0;
 }
+header .burger__menu {
+  display: none;
+  position: absolute;
+  width: calc(100% - 35px);
+  top: 65px;
+  left: -100%;
+  background-color: #1a1a1a;
+  z-index: 6;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+header .burger__menu._active {
+  left: 0;
+}
+header .burger__menu .first_row {
+  position: absolute;
+  background: #1a1a1a;
+  background: linear-gradient(-45deg, transparent 10px, #1e1e1e 0);
+  border-bottom: none;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+header .burger__menu .header_navigation {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  background: linear-gradient(-45deg, transparent 15px, #1e1e1e 0);
+  position: absolute;
+  width: 90%;
+  top: 31px;
+}
+header .burger__menu .header_navigation .header__list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header .burger__menu .header_navigation .header__list .header__item {
+  margin: 0 30px 0 0;
+}
+header .burger__menu .header_navigation .header__list .header__item:last-child {
+  margin: 0;
+}
+header .burger__menu .header_navigation .header__list .header__block {
+  margin: 0 30px 0 0;
+}
+header .burger__menu .header_navigation .header__list .header__block:last-child {
+  margin: 0;
+}
 
 .menu__icon {
   display: none;
-  z-index: 6;
+  z-index: 7;
   position: absolute;
   right: 20px;
   top: 20px;
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   width: 30px;
   height: 24px;
   cursor: pointer;
@@ -148,8 +199,8 @@ header .container {
   position: absolute;
   height: 15%;
   width: 100%;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: #fff;
 }
 .menu__icon::before, .menu__icon::after {
@@ -170,6 +221,10 @@ header .container {
   -webkit-transform: scale(1) translate(0, 50%);
           transform: scale(1) translate(0, 50%);
 }
+.menu__icon._active {
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+}
 .menu__icon._active span {
   width: 50%;
   left: 25%;
@@ -182,43 +237,7 @@ header .container {
   width: 100%;
 }
 
-.burger__menu {
-  display: none;
-  position: absolute;
-  width: calc(100% + 20px);
-  top: 100%;
-  left: -10px;
-  background-color: #fff;
-  padding: 10px 10px 15px;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transform: translateY(-50%) scaleY(0);
-          transform: translateY(-50%) scaleY(0);
-}
-.burger__menu li {
-  margin: 0 0 15px;
-}
-.burger__menu li:last-child {
-  margin: 0;
-}
-.burger__menu li a {
-  font-size: 18px;
-  line-height: 17px;
-  color: #000000;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  text-transform: capitalize;
-}
-.burger__menu li a:hover {
-  color: #eaa124;
-}
-.burger__menu._active {
-  -webkit-transform: translateY(0) scaleY(1);
-          transform: translateY(0) scaleY(1);
-}
-
 .header__logo {
-  display: block;
   width: 300px;
   height: 100px;
   position: absolute;
@@ -242,7 +261,10 @@ header .container {
   transition: all 500ms ease-in-out;
 }
 .header__logo img {
-  width: 50%;
+  position: absolute;
+  width: auto;
+  height: 25%;
+  top: 37.5%;
 }
 .header__logo:hover {
   -webkit-transform: scale(1.05);
@@ -886,6 +908,9 @@ header .container {
   background: #1a1a1a;
   color: #fff;
 }
+.why .container {
+  max-width: 1250px;
+}
 
 .why__row {
   display: -ms-flex;
@@ -894,9 +919,9 @@ header .container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .why__item {
@@ -917,7 +942,7 @@ header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 50px;
+  margin: 25px;
 }
 .why__item img {
   margin: 0 0 10px;
@@ -1751,6 +1776,11 @@ footer {
   line-height: 12px;
 }
 
+@media (max-width: 1250px) {
+  .why__item {
+    margin: 15px;
+  }
+}
 @media (max-width: 1100px) {
   header .container {
     margin: 0 20px;
@@ -1766,6 +1796,10 @@ footer {
 
   .games .container {
     max-width: 740px;
+  }
+
+  .why__item {
+    margin: 6px;
   }
 }
 @media (max-width: 1100px) {
@@ -1797,18 +1831,6 @@ footer {
   .footer__subitem {
     margin: 0 20px 0 0;
   }
-}
-@media (max-width: 800px) {
-  .menu__icon {
-    display: block;
-  }
-
-  .how_to_play__item p {
-    padding: 0 0 30px;
-  }
-  .how_to_play__item img {
-    width: 60%;
-  }
 
   .next_level .title {
     font-size: 34px;
@@ -1820,12 +1842,50 @@ footer {
     font-size: 13px;
     line-height: 16px;
   }
-
-  .burger__menu {
+}
+@media (max-width: 800px) {
+  .menu__icon {
     display: block;
+  }
+
+  .header__logo {
+    left: 0;
+    background: linear-gradient(-45deg, transparent 25px, #1e1e1e 0);
+    height: 64px;
+    width: 30%;
+  }
+  .header__logo:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .header__logo._active {
+    width: 100%;
+  }
+  .how_to_play__item p {
+    padding: 0 0 30px;
+  }
+  .how_to_play__item img {
+    width: 60%;
   }
 
   header .container {
     display: none;
+  }
+  header .burger__menu {
+    display: block;
+  }
+
+  .footer__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__item {
+    margin: 0 0 20px;
+  }
+  .footer__item:last-child {
+    margin: 0;
   }
 }
