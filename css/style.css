@@ -122,6 +122,9 @@ body {
   font-family: Montserrat;
   background: #1a1a1a;
 }
+body._lock {
+  overflow: hidden;
+}
 
 header {
   background: #1a1a1a;
@@ -581,8 +584,174 @@ header .burger__menu .header_navigation .header__list .header__block:last-child 
       -ms-flex-align: center;
           align-items: center;
 }
+.first_screen__row a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.first_screen__row img {
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.x_box img {
+  width: 30px;
+  left: calc((50px - 30px) / 2);
+}
+.x_box .first_link {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.x_box .first_link_hower {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.x_box:hover .first_link {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.x_box:hover .first_link_hower {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.appstore img {
+  width: 30px;
+  left: calc((50px - 30px) / 2);
+}
+.appstore .first_link {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.appstore .first_link_hower {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.appstore:hover .first_link {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.appstore:hover .first_link_hower {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.playstation img {
+  width: 38.28px;
+  left: calc((50px - 38.28px) / 2);
+}
+.playstation .first_link {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.playstation .first_link_hower {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.playstation:hover .first_link {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.playstation:hover .first_link_hower {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.android img {
+  width: 25.38px;
+  left: calc((50px - 25.38px) / 2);
+}
+.android .first_link {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.android .first_link_hower {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.android:hover .first_link {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.android:hover .first_link_hower {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.steam img {
+  width: 30px;
+  left: calc((50px - 30px) / 2);
+}
+.steam .first_link {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.steam .first_link_hower {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.steam:hover .first_link {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.steam:hover .first_link_hower {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.epic img {
+  width: 25.85px;
+  left: calc((50px - 25.85px) / 2);
+}
+.epic .first_link {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.epic .first_link_hower {
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.epic:hover .first_link {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.epic:hover .first_link_hower {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .first_screen__item {
+  width: 50px;
   display: block;
   -webkit-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
@@ -590,72 +759,6 @@ header .burger__menu .header_navigation .header__list .header__block:last-child 
 }
 .first_screen__item:last-child {
   margin: 0;
-}
-.first_screen__item .x_box {
-  width: 30px;
-  height: 30px;
-  background: url("../img/x-box.svg") 50% 50%/cover no-repeat;
-}
-.first_screen__item .x_box:hover {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-}
-.first_screen__item .appstore {
-  width: 30px;
-  height: 30px;
-  background: url("../img/appstore.svg") 50% 50%/cover no-repeat;
-}
-.first_screen__item .appstore:hover {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-}
-.first_screen__item .playstation {
-  width: 38.28px;
-  height: 30px;
-  background: url("../img/playstation.svg") 50% 50%/cover no-repeat;
-}
-.first_screen__item .playstation:hover {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-}
-.first_screen__item .android {
-  width: 25.38px;
-  height: 30px;
-  background: url("../img/android.svg") 50% 50%/cover no-repeat;
-}
-.first_screen__item .android:hover {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-}
-.first_screen__item .steam {
-  width: 30px;
-  height: 30px;
-  background: url("../img/steam.svg") 50% 50%/cover no-repeat;
-}
-.first_screen__item .steam:hover {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-}
-.first_screen__item .epic {
-  width: 25.85px;
-  height: 30px;
-  background: url("../img/epic.svg") 50% 50%/cover no-repeat;
-}
-.first_screen__item .epic:hover {
-  -webkit-transform: scale(1.07);
-          transform: scale(1.07);
-  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
-          filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.35));
 }
 
 .games {
@@ -832,8 +935,12 @@ header .burger__menu .header_navigation .header__list .header__block:last-child 
 }
 
 .how_to_play__avatar {
-  padding: 20px 0 0;
+  padding: 40px 0;
   background: url("../img/create-av-back.webp") 50% 50%/cover no-repeat;
+  position: relative;
+}
+.how_to_play__avatar .container {
+  height: 100%;
 }
 
 .how_to_play__row {
@@ -847,7 +954,6 @@ header .burger__menu .header_navigation .header__list .header__block:last-child 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 .how_to_play__item {
@@ -875,7 +981,7 @@ header .burger__menu .header_navigation .header__list .header__block:last-child 
 .item_image .avatar {
   position: absolute;
   bottom: 0;
-  height: 100%;
+  height: 90%;
   width: auto;
 }
 
@@ -1875,6 +1981,38 @@ footer {
     display: block;
   }
 
+  .how_to_play__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .how_to_play__row .item_image img {
+    position: relative;
+  }
+
+  .how_to_play__attribute .how_to_play__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .next_level__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .next_level__item:last-child {
+    margin: 0;
+  }
+
+  .how_to_play__avatar {
+    padding: 40px 0 0;
+  }
+
   .footer__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1887,5 +2025,98 @@ footer {
   }
   .footer__item:last-child {
     margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  header .burger__menu .first_row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .burger__menu .first_row__slogan {
+    display: none;
+  }
+  header .burger__menu .first_row__social {
+    -webkit-transform: translateX(13%);
+            transform: translateX(13%);
+  }
+  header .burger__menu .header_navigation {
+    padding: 30px 20px;
+    width: 80%;
+  }
+  header .burger__menu .header_navigation .header__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header .burger__menu .header_navigation .header__list .header__item {
+    margin: 0 0 30px;
+  }
+  header .burger__menu .header_navigation .header__list .header__item:last-child {
+    margin: 0;
+  }
+  header .burger__menu .header_navigation .header__list .header__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 30px 0;
+  }
+  header .burger__menu .header_navigation .header__list .header__block:last-child {
+    margin: 0;
+  }
+
+  .header__logo {
+    width: 50%;
+  }
+
+  .next_level {
+    padding: 120px 0 60px;
+  }
+
+  .where__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .where__item {
+    width: 50%;
+    height: 90px;
+    border: 1px solid #fff;
+  }
+
+  .tech_specs:before {
+    opacity: 0;
+  }
+
+  .tech_specs__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tech_specs__row .tech_specs__item {
+    margin: 0 0 37px;
+  }
+  .tech_specs__row h5 {
+    margin: 0 -20px 37px;
+    padding: 10px 0 10px 20px;
+    background: rgba(38, 40, 54, 0.4);
+  }
+}
+@media (max-width: 400px) {
+  .first_screen__title {
+    font-size: 35px;
+    line-height: 45px;
   }
 }
