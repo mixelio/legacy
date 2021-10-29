@@ -1,0 +1,297 @@
+@media (max-width: 1250px) {
+  .why__item {
+    margin: 15px;
+  }
+}
+@media (max-width: 1100px) {
+  header .container {
+    margin: 0 20px;
+  }
+
+  .first_row {
+    padding: 9px 110px;
+  }
+
+  .header_navigation {
+    padding: 17px 110px;
+  }
+
+  .games .container {
+    max-width: 740px;
+  }
+
+  .why__item {
+    margin: 6px;
+  }
+}
+@media (max-width: 1000px) {
+  .first_row {
+    padding: 9px 60px;
+  }
+
+  .header_navigation {
+    padding: 17px 60px;
+  }
+
+  .games .container {
+    max-width: 620px;
+  }
+}
+@media (max-width: 900px) {
+  .first_row {
+    padding: 9px 15px;
+  }
+
+  .header_navigation {
+    padding: 17px 15px;
+  }
+
+  .games .container {
+    max-width: 520px;
+  }
+
+  .footer__subitem {
+    margin: 0 20px 0 0;
+  }
+
+  .next_level .title {
+    font-size: 34px;
+    line-height: 44px;
+    padding: 0 0 0 34px;
+  }
+  .next_level .title__tag {
+    top: 42%;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .menu__icon {
+    display: block;
+  }
+
+  .header__logo {
+    left: 0;
+    background: linear-gradient(-45deg, transparent 25px, #1e1e1e 0);
+    height: 64px;
+    width: 30%;
+  }
+  .header__logo:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .header__logo._active {
+    width: 100%;
+  }
+  .how_to_play__item p {
+    padding: 0 0 30px;
+  }
+  .how_to_play__item img {
+    width: 60%;
+  }
+
+  header .container {
+    display: none;
+  }
+  header .burger__menu {
+    display: block;
+  }
+
+  .how_to_play__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .how_to_play__row .item_image img {
+    position: relative;
+  }
+
+  .how_to_play__attribute .how_to_play__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .next_level__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .next_level__item:last-child {
+    margin: 0;
+  }
+
+  .how_to_play__avatar {
+    padding: 40px 0 0;
+  }
+
+  .footer__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__item {
+    margin: 0 0 20px;
+  }
+  .footer__item:last-child {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  header .burger__menu .first_row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .burger__menu .first_row__slogan {
+    display: none;
+  }
+  header .burger__menu .first_row__social {
+    -webkit-transform: translateX(13%);
+            transform: translateX(13%);
+  }
+  header .burger__menu .header_navigation {
+    padding: 30px 20px;
+    width: 80%;
+  }
+  header .burger__menu .header_navigation .header__list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header .burger__menu .header_navigation .header__list .header__item {
+    margin: 0 0 30px;
+  }
+  header .burger__menu .header_navigation .header__list .header__item:last-child {
+    margin: 0;
+  }
+  header .burger__menu .header_navigation .header__list .header__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 30px 0;
+  }
+  header .burger__menu .header_navigation .header__list .header__block:last-child {
+    margin: 0;
+  }
+
+  .header__logo {
+    width: 50%;
+  }
+
+  .first_screen__row {
+    -webkit-box-pack: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .first_screen__item {
+    margin: 0;
+  }
+
+  .next_level {
+    padding: 120px 0 60px;
+  }
+
+  .where__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .where__item {
+    width: 50%;
+    height: 90px;
+    border: 1px solid #fff;
+  }
+
+  .tech_specs:before {
+    opacity: 0;
+  }
+
+  .tech_specs__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tech_specs__row .tech_specs__item {
+    margin: 0 0 37px;
+  }
+  .tech_specs__row h5 {
+    margin: 0 -20px 37px;
+    padding: 10px 0 10px 20px;
+    background: rgba(38, 40, 54, 0.4);
+  }
+}
+@media (max-width: 400px) {
+  .first_screen__title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .title {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .next_level .title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .next_level .title__tag {
+    top: 42%;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .tech_specs__follow_row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .tech_specs__follow_item {
+    height: 110px;
+    width: 50%;
+    border: 1px solid #ffffff;
+  }
+
+  .tech_specs__follow_item:last-child {
+    border: 1px solid #ffffff;
+  }
+
+  .footer__subitem {
+    margin: 0 10px 0 0;
+  }
+
+  .item_image .avatar {
+    height: auto;
+    width: 100%;
+  }
+
+  .footer__naviration a {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8d8c8c;
+  }
+}

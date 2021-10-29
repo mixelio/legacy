@@ -46,18 +46,36 @@ new Swiper(".games__swiper", {
   }
 });
 
-const play = document.querySelector(".play");
-const video = document.querySelector(".content__video");
-const playActive = document.querySelector("._playActive");
-const playStop = document.querySelector(".playStop");
+new Swiper(".blog_news__slider", {
+  spaceBetween: 23,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true
+  },
 
-if (!playActive) {
-  play.addEventListener("click", function(e) {
-    play.classList.add("_playActive");
-    video.setAttribute("autoplay", "");
-    video.setAttribute("controls", "");
-  });
-}
+  mousewheel: {
+    sensitivity: 2
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    320: {
+      direction: "horizontal",
+      spaceBetween: 20,
+      slidesPerView: 1,
+      mousewheel: false
+    },
+    450: {
+      slidesPerView: 2
+    },
+    601: {
+      direction: "vertical",
+      slidesPerView: 2
+    }
+  }
+});
 
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".burger__menu");
@@ -69,5 +87,18 @@ if (iconMenu) {
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
     logo.classList.toggle("_active");
+  });
+}
+
+const play = document.querySelector(".play");
+const video = document.querySelector(".content__video");
+const playActive = document.querySelector("._playActive");
+const playStop = document.querySelector(".playStop");
+
+if (!playActive) {
+  play.addEventListener("click", function(e) {
+    play.classList.add("_playActive");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("controls", "");
   });
 }
