@@ -21,7 +21,8 @@
   display: flex;
   flex-direction: row-reverse;
   max-width: 1170px;
-  margin: -100px auto 0;
+  margin: 0 auto;
+  padding: 70px 0;
 }
 
 .main_content__aside {
@@ -36,9 +37,72 @@
   width: 60%;
 }
 
+.trending_posts {
+  .trending_posts__title {
+    padding: 0 0 0 26px;
+    margin-bottom: 36px;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      background: url("../img/trending.svg") 0 0 / contain no-repeat;
+      top: calc(50% - 8.5px);
+      left: 0;
+    }
+  }
+  .trending_posts__trasition {
+    padding: 0 12px 0 20px;
+    border-right: 1px solid #eee;
+    font-size: 12px;
+    line-height: 15px;
+    color: #cccccc;
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 16px;
+      height: 10px;
+      background: url("../img/transition.svg") 0 50% / contain no-repeat;
+      top: calc(50% - 5px);
+      left: 0;
+    }
+  }
+  .trending_posts__looking {
+    padding: 0 12px 0 32px;
+    border-right: 1px solid #eee;
+    font-size: 12px;
+    line-height: 15px;
+    color: #cccccc;
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 16px;
+      height: 12px;
+      background: url("../img/looking.svg") 0 50% / contain no-repeat;
+      top: calc(50% - 6px);
+      left: 11px;
+    }
+  }
+  .trending_posts__time {
+    padding: 0 0 0 10px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #cccccc;
+    position: relative;
+  }
+}
+
 .latest_articles {
   padding: 35px 20px 50px;
-  margin: 0 0 55px;
+  margin: 0 0 30px;
   background: #262836;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
   .latest_articles__titles {
@@ -116,7 +180,7 @@
 }
 
 .latest_articles__trasition {
-  padding: 0 0 0 35px;
+  padding: 0 0 0 28px;
   font-size: 12px;
   line-height: 15px;
   color: #cccccc;
@@ -129,14 +193,14 @@
     height: 10px;
     background: url("../img/transition.svg") 0 50% / contain no-repeat;
     top: calc(50% - 5px);
-    left: 15px;
+    left: 8px;
   }
 }
 
 .follow_us {
   text-align: center;
   padding: 35px 20px 50px;
-  margin: 0 0 55px;
+  margin: 0 0 30px;
   background: #262836;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
   .follow_us__titile {
@@ -206,6 +270,15 @@
       height: 24px;
       @include followslowhover;
     }
+  }
+}
+
+.play_free {
+  padding: 35px 40px;
+  background: #262836;
+  margin: 0 0 30px;
+  .play_free__button {
+    margin: 0;
   }
 }
 
