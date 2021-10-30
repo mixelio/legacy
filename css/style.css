@@ -2007,7 +2007,6 @@ body._lock {
 
 .update__link,
 .news__link {
-  display: block;
   width: 100%;
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -2581,6 +2580,9 @@ body._lock {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.blog_news__slider .swiper-slide:hover .blog_swiper__text {
+  color: #67552a;
+}
 
 .news-scrollbar {
   display: block;
@@ -2832,6 +2834,8 @@ body._lock {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .blog_updates {
@@ -2882,6 +2886,9 @@ body._lock {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.blog_updates__item:hover .blog_updates__text {
+  color: #67552a;
 }
 
 .blog_updates__img {
