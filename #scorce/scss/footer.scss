@@ -23,6 +23,12 @@ footer {
 }
 
 .footer__logo {
+  font-family: "Intro_Black";
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .footer__subrow {
@@ -37,6 +43,7 @@ footer {
     font-size: 14px;
     line-height: 17px;
     color: #8d8c8c;
+    text-transform: capitalize;
     &:hover {
       text-decoration: underline;
     }

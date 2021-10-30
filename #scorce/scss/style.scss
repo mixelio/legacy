@@ -5,7 +5,15 @@
 
 // шрифты
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@font-face {
+  font-family: "Intro_Black";
+  src: url("../fonts/intro_black.eot");
+  src: local("☺"), url("../fonts/intro_black.woff") format("woff"),
+    url("../fonts/intro_black.ttf") format("truetype"),
+    url("../fonts/intro_black.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 // Миксины
 
 // скошеные углы
@@ -430,8 +438,6 @@ body {
 }
 
 .how_to_play {
-  //padding: 88px 0 0;
-  background: #1a1a1a;
   color: #fff;
 }
 
@@ -526,7 +532,6 @@ body {
 
 .why {
   padding: 100px 0 0;
-  background: #1a1a1a;
   color: #fff;
   .container {
     max-width: 1250px;
@@ -572,7 +577,6 @@ body {
 
 .where {
   padding: 120px 0 170px;
-  background: #1a1a1a;
   color: #fff;
   a {
     display: block;
@@ -672,7 +676,6 @@ body {
 }
 
 .update {
-  background: #1a1a1a;
   color: #fff;
   .container {
     position: relative;
@@ -715,6 +718,12 @@ body {
 }
 
 .swiper-slide {
+  &:hover {
+    .update__text {
+      transition: all 200ms ease-out;
+      color: #67552a;
+    }
+  }
 }
 
 .update__column {
@@ -734,6 +743,12 @@ body {
   &:last-child {
     padding: 0 20px;
   }
+}
+
+.update__link {
+  display: block;
+  width: 100%;
+  height: min-content;
 }
 
 .update__img {
@@ -762,7 +777,7 @@ body {
     border-width: 1px 0px 30px 30px;
     border-color: transparent transparent #262836 transparent;
   }
-  a {
+  .update__button {
     position: absolute;
     display: block;
     background: #67552a;
@@ -826,7 +841,6 @@ body {
 
 .next_level {
   padding: 120px 0 170px;
-  background: #1a1a1a;
   color: #fff;
   img {
     position: absolute;

@@ -813,6 +813,13 @@ main {
   border-left: 1px solid #ccc;
 }
 
+@font-face {
+  font-family: "Intro_Black";
+  src: url("../fonts/intro_black.eot");
+  src: local("☺"), url("../fonts/intro_black.woff") format("woff"), url("../fonts/intro_black.ttf") format("truetype"), url("../fonts/intro_black.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 header {
   background: #1a1a1a;
   position: relative;
@@ -947,6 +954,12 @@ header .burger__menu .header_navigation .header__list .header__block:last-child 
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.1));
           filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.1));
+  font-family: "Intro_Black";
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 100px;
+  text-transform: uppercase;
+  color: #ffffff;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
@@ -1599,7 +1612,6 @@ body._lock {
 }
 
 .how_to_play {
-  background: #1a1a1a;
   color: #fff;
 }
 
@@ -1707,7 +1719,6 @@ body._lock {
 
 .why {
   padding: 100px 0 0;
-  background: #1a1a1a;
   color: #fff;
 }
 .why .container {
@@ -1762,7 +1773,6 @@ body._lock {
 
 .where {
   padding: 120px 0 170px;
-  background: #1a1a1a;
   color: #fff;
 }
 .where a {
@@ -1923,7 +1933,6 @@ body._lock {
 }
 
 .update {
-  background: #1a1a1a;
   color: #fff;
 }
 .update .container {
@@ -1965,6 +1974,12 @@ body._lock {
   color: #fff;
 }
 
+.swiper-slide:hover .update__text {
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  color: #67552a;
+}
+
 .update__column {
   display: -ms-flex;
   display: -webkit-box;
@@ -1988,6 +2003,14 @@ body._lock {
 }
 .update__item:last-child {
   padding: 0 20px;
+}
+
+.update__link {
+  display: block;
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .update__img {
@@ -2018,7 +2041,7 @@ body._lock {
   border-width: 1px 0px 30px 30px;
   border-color: transparent transparent #262836 transparent;
 }
-.update__img a {
+.update__img .update__button {
   position: absolute;
   display: block;
   background: #67552a;
@@ -2088,7 +2111,6 @@ body._lock {
 
 .next_level {
   padding: 120px 0 170px;
-  background: #1a1a1a;
   color: #fff;
 }
 .next_level img {
@@ -2924,6 +2946,15 @@ footer {
   line-height: 12px;
 }
 
+.footer__logo {
+  font-family: "Intro_Black";
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 .footer__subrow {
   display: -ms-flex;
   display: -webkit-box;
@@ -2936,6 +2967,7 @@ footer {
   font-size: 14px;
   line-height: 17px;
   color: #8d8c8c;
+  text-transform: capitalize;
 }
 .footer__naviration a:hover {
   text-decoration: underline;
