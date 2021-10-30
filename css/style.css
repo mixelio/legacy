@@ -2007,7 +2007,8 @@ body._lock {
 
 .update__link,
 .news__link {
-  width: 100%;
+  display: inline-block;
+  width: 101%;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
