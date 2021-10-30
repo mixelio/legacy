@@ -745,7 +745,8 @@ body {
   }
 }
 
-.update__link {
+.update__link,
+.news__link {
   display: block;
   width: 100%;
   height: min-content;
@@ -1252,7 +1253,7 @@ body {
     border-width: 1px 0px 30px 30px;
     border-color: transparent transparent #262836 transparent;
   }
-  a {
+  .news__button {
     position: absolute;
     display: block;
     background: #67552a;
@@ -1297,6 +1298,13 @@ body {
   overflow: hidden;
   padding: 0 0 100px;
   min-width: 0;
+  transition: all 200ms ease;
+  &:hover {
+    .blog_news__text {
+      transition: all 200ms ease;
+      color: #67552a;
+    }
+  }
 }
 .blog_news__item_1 {
   width: 65%;
@@ -1351,7 +1359,7 @@ body {
     border-width: 1px 0px 30px 30px;
     border-color: transparent transparent #262836 transparent;
   }
-  a {
+  .news__button {
     position: absolute;
     display: block;
     background: #67552a;
@@ -1418,6 +1426,7 @@ body {
 }
 
 .blog_updates {
+  padding: 0 0 100px;
   color: #fff;
   .title {
     margin-bottom: 57px;
