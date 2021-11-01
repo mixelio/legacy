@@ -111,20 +111,26 @@
     width: 100%;
   }
   .main_content__aside {
-    padding: 0 20px;
+    padding: 0;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     article {
-      width: 320px;
+      width: 100%;
       height: min-content;
       flex: 0 1 auto;
     }
     .play_free {
       padding: 35px 20px;
     }
+  }
+  .main_content__aside {
+    max-width: 100%;
+  }
+  .play_free .play_free__button {
+    margin: 0 auto;
   }
 }
 
@@ -156,6 +162,12 @@
     }
     img {
       width: 60%;
+    }
+  }
+
+  .how_to_play {
+    .how_to_play__block {
+      height: auto;
     }
   }
 

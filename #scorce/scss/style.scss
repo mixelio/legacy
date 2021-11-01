@@ -439,8 +439,17 @@ body {
 
 .how_to_play {
   color: #fff;
+  .container {
+    height: 100%;
+  }
   .how_to_play__block {
     height: 350px;
+    position: relative;
+    img {
+      position: absolute;
+      height: 100%;
+      top: 0;
+    }
   }
 }
 
@@ -469,13 +478,8 @@ body {
 }
 
 .how_to_play__avatar {
-  padding: 40px 0;
+  padding: 40px 0 0;
   background: url("../img/create-av-back.webp") 50% 50% / cover no-repeat;
-
-  position: relative;
-  .container {
-    height: 100%;
-  }
 }
 
 .how_to_play__row {
@@ -489,14 +493,10 @@ body {
 
 .how_to_play__item {
   flex: 1;
-
   p {
     font-size: 16px;
     line-height: 20px;
     color: #cccccc;
-  }
-  img {
-    width: 50%;
   }
 }
 
@@ -524,7 +524,7 @@ body {
 }
 
 .how_to_play__favorit {
-  padding: 100px 0;
+  padding: 40px 0;
   background: url("../img/favorite-sport.webp") 50% 30% / cover no-repeat;
   p {
     max-width: 500px;

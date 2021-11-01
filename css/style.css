@@ -1614,8 +1614,17 @@ body._lock {
 .how_to_play {
   color: #fff;
 }
+.how_to_play .container {
+  height: 100%;
+}
 .how_to_play .how_to_play__block {
   height: 350px;
+  position: relative;
+}
+.how_to_play .how_to_play__block img {
+  position: absolute;
+  height: 100%;
+  top: 0;
 }
 
 .title {
@@ -1646,12 +1655,8 @@ body._lock {
 }
 
 .how_to_play__avatar {
-  padding: 40px 0;
+  padding: 40px 0 0;
   background: url("../img/create-av-back.webp") 50% 50%/cover no-repeat;
-  position: relative;
-}
-.how_to_play__avatar .container {
-  height: 100%;
 }
 
 .how_to_play__row {
@@ -1677,9 +1682,6 @@ body._lock {
   font-size: 16px;
   line-height: 20px;
   color: #cccccc;
-}
-.how_to_play__item img {
-  width: 50%;
 }
 
 .item_image {
@@ -1711,7 +1713,7 @@ body._lock {
 }
 
 .how_to_play__favorit {
-  padding: 100px 0;
+  padding: 40px 0;
   background: url("../img/favorite-sport.webp") 50% 30%/cover no-repeat;
 }
 .how_to_play__favorit p {
@@ -3164,7 +3166,7 @@ footer {
   }
 
   .main_content__aside {
-    padding: 0 20px;
+    padding: 0;
     display: -ms-flex;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3175,7 +3177,7 @@ footer {
         justify-content: space-around;
   }
   .main_content__aside article {
-    width: 320px;
+    width: 100%;
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
@@ -3185,6 +3187,14 @@ footer {
   }
   .main_content__aside .play_free {
     padding: 35px 20px;
+  }
+
+  .main_content__aside {
+    max-width: 100%;
+  }
+
+  .play_free .play_free__button {
+    margin: 0 auto;
   }
 }
 @media (max-width: 800px) {
@@ -3212,6 +3222,10 @@ footer {
   }
   .how_to_play__item img {
     width: 60%;
+  }
+
+  .how_to_play .how_to_play__block {
+    height: auto;
   }
 
   header .container {
