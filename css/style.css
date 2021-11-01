@@ -1614,6 +1614,9 @@ body._lock {
 .how_to_play {
   color: #fff;
 }
+.how_to_play .how_to_play__block {
+  height: 350px;
+}
 
 .title {
   padding: 0 0 24px;
@@ -1662,6 +1665,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 
 .how_to_play__item {
@@ -1689,7 +1693,7 @@ body._lock {
 .item_image .avatar {
   position: absolute;
   bottom: 0;
-  height: 90%;
+  height: 100%;
   width: auto;
 }
 
@@ -2007,7 +2011,6 @@ body._lock {
 
 .update__link,
 .news__link {
-  display: inline-block;
   width: 101%;
   height: -webkit-min-content;
   height: -moz-min-content;

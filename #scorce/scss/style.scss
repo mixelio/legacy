@@ -439,6 +439,9 @@ body {
 
 .how_to_play {
   color: #fff;
+  .how_to_play__block {
+    height: 350px;
+  }
 }
 
 .title {
@@ -481,6 +484,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .how_to_play__item {
@@ -502,7 +506,7 @@ body {
   .avatar {
     position: absolute;
     bottom: 0;
-    height: 90%;
+    height: 100%;
     width: auto;
   }
 }
@@ -747,7 +751,7 @@ body {
 
 .update__link,
 .news__link {
-  display: inline-block;
+  //display: inline-block;
   width: 101%;
   height: min-content;
 }
