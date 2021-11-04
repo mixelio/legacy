@@ -104,6 +104,9 @@
       height: auto;
     }
   }
+  .support_faq .main_content__item {
+    margin: 0 30px 0 0;
+  }
 }
 
 @media (max-width: 850px) {
@@ -134,6 +137,19 @@
   }
   .play_free .play_free__button {
     margin: 0 auto;
+  }
+  .support_faq .main_content__item {
+    margin: 0;
+  }
+  .support_faq__row {
+    flex-direction: column;
+  }
+  .server_status__item_1 {
+    margin: 0 50px 15px;
+    position: relative;
+  }
+  .server_status__row_1 {
+    flex-wrap: wrap;
   }
 }
 
@@ -258,6 +274,20 @@
     margin: 0 0 20px;
     width: 60%;
   }
+  .select_game {
+    padding: 36px 0px 20px;
+    .select_game__item_1,
+    .select_game__item_2,
+    .select_game__item_3 {
+      margin: 0 20px 0 0;
+    }
+  }
+  .support_faq__general {
+    padding: 18px 20px 35px;
+  }
+  .server_status__item_1 {
+    margin: 0 20px 15px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -313,6 +343,40 @@
   }
   .main_content__general .general__text {
     padding: 25px 15px 50px;
+  }
+  .server_status .title_box {
+    padding: 25px 0;
+  }
+  .server_status .title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .select_game {
+    padding: 36px 0px 20px;
+    .select_game__item_1,
+    .select_game__item_2,
+    .select_game__item_3 {
+      margin: 0 20px 0 0;
+      width: 120px;
+    }
+  }
+  .select_game__row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 0;
+  }
+  .select_game__subitem {
+    width: fit-content;
+    margin: 15px 0;
+  }
+  .support__search_form {
+    max-width: 400px;
+  }
+  .search__window {
+    width: 400px;
+  }
+  .select_game__catigories {
+    padding: 0 20px 20px;
   }
 }
 
@@ -543,5 +607,24 @@
       color: #cccccc;
       position: relative;
     }
+  }
+  .support__search_form {
+    max-width: 300px;
+  }
+  .search__window {
+    width: 300px;
+  }
+  .server_status__item_1 {
+    margin: 0 0px 15px;
+    &.online,
+    &.offline,
+    &.maintenance {
+      padding-left: 34px;
+    }
+  }
+
+  .server_status__row_1 {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
