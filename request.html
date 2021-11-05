@@ -142,6 +142,70 @@
         </nav>
       </div>
     </header>
+    <section class="request_first_screen first_screen">
+      <div class="container">
+        <h1 class="blog_first_screen__title">Support Request</h1>
+        <h2 class="blog_first_screen__subtitle first_screen__subtitle">
+          We Are Glad to Help You
+        </h2>
+        <p class="request_first_screen__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+      </div>
+    </section>
+    <section class="request_form_section">
+      <div class="container">
+        <form action="" class="request_form">
+          <h4 class="request_form__title">Submit Support Request</h4>
+          <div class="request_form__row">
+            <input
+              placeholder="Full Name"
+              type="text"
+              class="name"
+              name="username"
+            />
+            <input placeholder="Your Email" type="text" class="" name="mail" />
+            <input placeholder="Subject" type="text" class="" name="subject" />
+            <select
+              name="language"
+              id=""
+              placeholder="Language"
+              class="form_ch"
+            >
+              <option class="option__lang" value="" disabled selected
+                >Language</option
+              >
+              <option value="">English</option>
+              <option value="">Русский</option>
+              <option value="">Frach</option>
+            </select>
+            <select name="category" id="" placeholder="category">
+              <option value="" disabled selected>Category</option>
+              <option value="">Sport</option>
+              <option value="">Shooter</option>
+              <option value="">Race</option>
+            </select>
+          </div>
+          <textarea type="textarea" placeholder="Question"></textarea>
+          <h5 class="attechment">Attechment:</h5>
+          <input type="file" name="photo" class="form_photo" id="photo" />
+          <label for="photo" class="photo_label">Add your file here</label>
+
+          <form method="post" action="#">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LcVkxYdAAAAAN_WoJB_PAX1W0naiSSBJatZMPaW"
+            ></div>
+          </form>
+          <button type="submit" class="submit__button">submit</button>
+        </form>
+      </div>
+    </section>
     <footer>
       <div class="container">
         <div class="footer__row">
@@ -217,7 +281,7 @@
         >
       </div>
     </footer>
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <!-- Подключил jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Подключение слайдера swiper -->

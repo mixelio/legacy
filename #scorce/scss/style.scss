@@ -1928,5 +1928,229 @@ body {
   }
 }
 
+//
+//
+//
+// ------------- request
+//
+//
+//
+
+.request_first_screen {
+  padding-bottom: 350px;
+  background: repeating-linear-gradient(
+    45deg,
+    #1e1e1e,
+    #1e1e1e 2px,
+    #1a1a1a 2px,
+    #1a1a1a 5px
+  );
+  .container {
+    max-width: 850px;
+  }
+  .first_screen__subtitle {
+    margin-bottom: 28px;
+  }
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+.first_screen {
+}
+
+.blog_first_screen__title {
+}
+
+.blog_first_screen__subtitle {
+}
+
+.request_first_screen__text {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #cccccc;
+}
+
+.request_form_section {
+  margin-top: -300px;
+  position: relative;
+  z-index: 2;
+  .container {
+    background: #262836;
+  }
+  .request_form__title {
+    font-weight: 800;
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    color: #ffffff;
+    margin: 0 0 45px;
+  }
+}
+
+.request_form {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px 20px 80px;
+
+  .request_form__row {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    input {
+      background: #262836;
+      color: #cccccc;
+      margin: 0 0 30px 0;
+      display: block;
+      width: 47%;
+      height: 40px;
+      padding: 11px 20px;
+      border: 1px solid #383b51;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    select {
+      background: #262836;
+      font-family: inherit;
+      color: rgba(#ccc, 0.6);
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0 0 30px 0;
+      display: block;
+      width: 47%;
+      height: 40px;
+      padding: 11px 16px;
+      border: 1px solid #383b51;
+      box-sizing: border-box;
+      border-radius: 3px;
+      position: relative;
+      z-index: 1;
+      &:after {
+        content: "";
+        display: block;
+        //position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 7px;
+        background: url("../img/form_arrow.svg") 0 0 / contain no-repeat;
+        z-index: 3;
+      }
+      input {
+        margin: 0 0 10px;
+      }
+    }
+  }
+  textarea {
+    font-family: inherit;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 17px;
+    background: #262836;
+    display: block;
+    width: 100%;
+    height: 140px;
+    padding: 11px 20px;
+    border: 1px solid #383b51;
+    box-sizing: border-box;
+    border-radius: 3px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+}
+
+optio .form_photo {
+  font-size: 0;
+  display: block;
+  width: 28px;
+  height: 35px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: url("../img/file.svg");
+  }
+}
+
+.attechment {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-bottom: 23px;
+}
+
+.form_photo {
+  display: none;
+}
+
+.photo_label {
+  padding: 10px 0 10px 40px;
+  line-height: 35px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #cccccc;
+  position: relative;
+  margin-bottom: 35px;
+  display: block;
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 35px;
+    background: url("../img/file.svg") 0 0 / contain no-repeat;
+  }
+}
+
+.submit__button {
+  padding: 10px 0;
+  width: 160px;
+  display: block;
+  margin: 0 auto;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  transition: all 500ms ease;
+  background: linear-gradient(
+    90deg,
+    rgba(#67552a, 1),
+    rgba(#7a6228, 1),
+    rgba(#67552a, 1)
+  );
+  position: relative;
+  &:after {
+    transition: all 500ms ease;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: #000;
+  }
+  &:hover {
+    &:after {
+      opacity: 0.1;
+    }
+  }
+}
+
 @import "./footer.scss";
 @import "./adaptiv.scss";

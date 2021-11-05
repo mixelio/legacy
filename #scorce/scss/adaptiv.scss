@@ -30,6 +30,9 @@
   .container {
     padding: 0 20px;
   }
+  .request_form_section {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -378,6 +381,17 @@
   .select_game__catigories {
     padding: 0 20px 20px;
   }
+  .request_form {
+    .request_form__row {
+      flex-direction: column;
+      input {
+        width: 100%;
+      }
+      select {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 500px) {
@@ -459,6 +473,9 @@
       padding: 10px 0 10px 20px;
       background: rgba(#262836, 0.4);
     }
+  }
+  .request_form {
+    padding: 30px 0px 80px;
   }
 }
 
