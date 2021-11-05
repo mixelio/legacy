@@ -293,6 +293,18 @@
   }
 }
 
+@media (max-width: 650px) {
+  .request_form__row_1 {
+    flex-direction: column;
+  }
+  .attechment {
+    text-align: center;
+  }
+  .g-recaptcha {
+    transform: scale(0.77);
+  }
+}
+
 @media (max-width: 600px) {
   .blog_news__row {
     flex-direction: column;

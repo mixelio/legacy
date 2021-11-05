@@ -3402,9 +3402,11 @@ body._lock {
   margin-top: -300px;
   position: relative;
   z-index: 2;
+  padding-bottom: 60px;
 }
 .request_form_section .container {
   background: #262836;
+  padding-bottom: 70px;
 }
 .request_form_section .request_form__title {
   font-weight: 800;
@@ -3545,6 +3547,10 @@ optio .form_photo:before {
   background: url("../img/file.svg") 0 0/contain no-repeat;
 }
 
+.g-recaptcha {
+  width: 100%;
+}
+
 .submit__button {
   padding: 10px 0;
   width: 160px;
@@ -3576,6 +3582,19 @@ optio .form_photo:before {
 }
 .submit__button:hover:after {
   opacity: 0.1;
+}
+
+.request_form__row_1 {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
@@ -4021,6 +4040,23 @@ footer {
 
   .server_status__item_1 {
     margin: 0 20px 15px;
+  }
+}
+@media (max-width: 650px) {
+  .request_form__row_1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .attechment {
+    text-align: center;
+  }
+
+  .g-recaptcha {
+    -webkit-transform: scale(0.77);
+            transform: scale(0.77);
   }
 }
 @media (max-width: 600px) {

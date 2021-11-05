@@ -1977,8 +1977,10 @@ body {
   margin-top: -300px;
   position: relative;
   z-index: 2;
+  padding-bottom: 60px;
   .container {
     background: #262836;
+    padding-bottom: 70px;
   }
   .request_form__title {
     font-weight: 800;
@@ -2115,6 +2117,10 @@ optio .form_photo {
   }
 }
 
+.g-recaptcha {
+  width: 100%;
+}
+
 .submit__button {
   padding: 10px 0;
   width: 160px;
@@ -2150,6 +2156,26 @@ optio .form_photo {
       opacity: 0.1;
     }
   }
+}
+
+.request_form__row_1 {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.request_form__item {
+}
+
+.attechment {
+}
+
+.form_photo {
+}
+
+.photo_label {
 }
 
 @import "./footer.scss";

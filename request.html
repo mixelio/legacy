@@ -192,16 +192,22 @@
             </select>
           </div>
           <textarea type="textarea" placeholder="Question"></textarea>
-          <h5 class="attechment">Attechment:</h5>
-          <input type="file" name="photo" class="form_photo" id="photo" />
-          <label for="photo" class="photo_label">Add your file here</label>
-
-          <form method="post" action="#">
-            <div
-              class="g-recaptcha"
-              data-sitekey="6LcVkxYdAAAAAN_WoJB_PAX1W0naiSSBJatZMPaW"
-            ></div>
-          </form>
+          <div class="request_form__row_1">
+            <div class="request_form__item">
+              <h5 class="attechment">Attechment:</h5>
+              <input type="file" name="photo" class="form_photo" id="photo" />
+              <label for="photo" class="photo_label">Add your file here</label>
+            </div>
+            <div class="request_form__item capture_box">
+              <form method="post" action="#">
+                <div
+                  class="g-recaptcha"
+                  data-theme="dark"
+                  data-sitekey="6LcVkxYdAAAAAN_WoJB_PAX1W0naiSSBJatZMPaW"
+                ></div>
+              </form>
+            </div>
+          </div>
           <button type="submit" class="submit__button">submit</button>
         </form>
       </div>
