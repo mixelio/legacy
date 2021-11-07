@@ -93,6 +93,9 @@ new Swiper(".benefits__swiper", {
   spaceBetween: 20,
   breakpoints: {
     320: {
+      slidesPerView: 1
+    },
+    500: {
       slidesPerView: 2
     },
     700: {
