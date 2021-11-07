@@ -1924,13 +1924,14 @@ body {
   }
   .title {
     padding: 0;
-    margin-bottom: 38px;
     font-weight: 800;
     font-size: 35px;
     line-height: 43px;
     text-transform: capitalize;
     text-align: center;
     color: #ffffff;
+    width: 60%;
+    margin: 0 auto 38px;
     &:before {
       display: none;
     }
@@ -2206,6 +2207,7 @@ optio .form_photo {
 
 .partners_first_screen {
   background: url("../img/partners-main.jpg") 0 50% / cover no-repeat;
+  padding: 120px 0 100px;
   &:before,
   &:after {
     display: none;
@@ -2475,6 +2477,14 @@ optio .form_photo {
 }
 
 .requirements {
+  .latest_articles__item {
+    p {
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 22px;
+      color: #ffffff;
+    }
+  }
   .requirements__row {
     display: -webkit-flex;
     display: -ms-flex;
@@ -2498,7 +2508,7 @@ optio .form_photo {
     }
   }
 
-  & .requirements__inf {
+  & .requirements__info {
     width: 57%;
   }
   .requirements__img {
@@ -2571,6 +2581,19 @@ optio .form_photo {
     display: flex;
     align-content: center;
     background: none;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      right: 20px;
+      top: calc(50% - 5px);
+      width: 8px;
+      height: 10px;
+      background: url("../img/spoller-arrow.svg") 0 0 / contain no-repeat;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+    }
     span {
       display: inline-block;
       font-weight: 800;
@@ -2584,7 +2607,6 @@ optio .form_photo {
   .support_faq__spoller_item {
     padding: 10px 30px;
     background: #262836;
-    box-shadow: 0px 4px 30px rgba(36, 36, 50, 0.4);
     margin-bottom: 20px;
     border-bottom: none;
     &:last-child {

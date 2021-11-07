@@ -289,6 +289,9 @@
     width: 100%;
     // background: url("../img/REQUIREMENTS-1.jpg") 0 0% / cover no-repeat;
   }
+  .requirements .requirements__row .latest_articles__list {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -344,6 +347,32 @@
   }
   .g-recaptcha {
     transform: scale(0.77);
+  }
+  .how_it_work__row {
+    flex-direction: column;
+  }
+  .how_it_work__item {
+    padding-bottom: 55px;
+    margin-bottom: 15px;
+    margin-right: 0;
+    position: relative;
+    z-index: 2;
+
+    p {
+      max-width: 170px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #cccccc;
+    }
+    &:after {
+      left: calc(50% - 10px);
+      bottom: 20%;
+      top: auto;
+      transform: rotate(90deg);
+    }
+  }
+  .how_it_work {
+    padding-bottom: 40px;
   }
 }
 
