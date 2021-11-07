@@ -33,6 +33,9 @@
   .request_form_section {
     padding: 0 20px;
   }
+  .reddy {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -266,6 +269,26 @@
     margin: 0 5px 0 0;
     background: none;
   }
+  .calling__image {
+    width: 50%;
+    margin: 0 10px 0 0;
+  }
+  .how_it_work__item p {
+    max-width: 150px;
+  }
+  .how_it_work__item {
+    padding-right: 0px;
+  }
+  .how_it_work__item::before {
+    font-size: 80px;
+  }
+  .requirements .requirements__item:last-child {
+    display: none;
+  }
+  .requirements .requirements__item:first-child {
+    width: 100%;
+    // background: url("../img/REQUIREMENTS-1.jpg") 0 0% / cover no-repeat;
+  }
 }
 
 @media (max-width: 700px) {
@@ -290,6 +313,25 @@
   }
   .server_status__item_1 {
     margin: 0 20px 15px;
+  }
+  .calling__row {
+    flex-direction: column-reverse;
+  }
+  .calling__image {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: -20%;
+      object-fit: cover;
+    }
+  }
+  .calling__info {
+    width: 100%;
+    margin: 0 0 15px;
   }
 }
 

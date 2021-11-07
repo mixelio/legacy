@@ -77,6 +77,33 @@ new Swiper(".blog_news__slider", {
   }
 });
 
+new Swiper(".benefits__swiper", {
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  slidesPerView: 4,
+  spaceBetween: 20,
+  breakpoints: {
+    320: {
+      slidesPerView: 2
+    },
+    700: {
+      slidesPerView: 3
+    },
+    901: {
+      slidesPerView: 4
+    }
+  }
+});
+
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".burger__menu");
 const logo = document.querySelector(".header__logo");
@@ -102,6 +129,26 @@ $(function() {
       .slideUp(299);
 
     $(".support_faq__spoller_item").removeClass("active__item");
+    $(this)
+      .next()
+      .slideDown(299)
+      .parent()
+      .addClass("active__item");
+  });
+});
+
+$(function() {
+  // открываем вкладку по умолчанию
+
+  $(".partners_faq__spoller_item .spoller__text").slideUp();
+  $(".active__item .spoller__text").slideDown();
+
+  $("#accordion .spoller__title").on("click", function() {
+    $("#accordion .spoller__text")
+      .not($(this).next())
+      .slideUp(299);
+
+    $(".partners_faq__spoller_item").removeClass("active__item");
     $(this)
       .next()
       .slideDown(299)
