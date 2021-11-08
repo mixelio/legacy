@@ -2597,7 +2597,8 @@ optio .form_photo {
       transition: all 500ms ease;
     }
     span {
-      display: inline-block;
+      display: flex;
+      align-items: center;
       font-weight: 800;
       font-size: 25px;
       line-height: 30px;
