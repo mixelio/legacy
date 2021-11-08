@@ -374,6 +374,16 @@
   .how_it_work {
     padding-bottom: 40px;
   }
+  .faq {
+    .support_faq__spoller_item {
+      padding: 10px 15px;
+    }
+    .spoller__title {
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {

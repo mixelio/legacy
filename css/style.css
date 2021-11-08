@@ -3967,6 +3967,7 @@ optio .form_photo:before {
   margin-bottom: 44px;
 }
 .faq .spoller__title {
+  padding-right: 10px;
   width: 100%;
   font-weight: 800;
   font-size: 18px;
@@ -3982,16 +3983,17 @@ optio .form_photo:before {
       align-content: center;
   background: none;
   position: relative;
+  text-align: left;
 }
 .faq .spoller__title:after {
   content: "";
   position: absolute;
   display: inline-block;
-  right: 20px;
-  top: calc(50% - 5px);
+  right: 0px;
+  top: calc(50% - 3px);
   width: 8px;
-  height: 10px;
-  background: url("../img/spoller-arrow.svg") 0 0/contain no-repeat;
+  height: 6px;
+  background: url("../img/spoller-arrow.svg") 0 0/8px 6px no-repeat;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -4018,6 +4020,9 @@ optio .form_photo:before {
   padding-bottom: 14px;
   margin-bottom: 24px;
   border-bottom: 1px solid #fff;
+}
+.faq .active__item .spoller__title:after {
+  top: calc(50% - 10px);
 }
 .faq .spoller__text {
   padding-bottom: 35px;
@@ -4577,6 +4582,13 @@ footer {
 
   .how_it_work {
     padding-bottom: 40px;
+  }
+
+  .faq .support_faq__spoller_item {
+    padding: 10px 15px;
+  }
+  .faq .spoller__title span {
+    margin-right: 10px;
   }
 }
 @media (max-width: 600px) {
