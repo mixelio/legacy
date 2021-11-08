@@ -4592,6 +4592,9 @@ footer {
   .faq .support_faq__spoller_item {
     padding: 10px 15px;
   }
+  .faq .spoller__title {
+    font-size: 16px;
+  }
   .faq .spoller__title span {
     margin-right: 10px;
   }
