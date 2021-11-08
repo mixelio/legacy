@@ -5016,3 +5016,13 @@ footer {
             align-items: flex-start;
   }
 }
+@media (max-width: 373px) {
+  .requirements__span {
+    margin: 0 0 10px;
+    display: block;
+  }
+
+  .requirements__button {
+    display: block;
+  }
+}
