@@ -4036,6 +4036,222 @@ optio .form_photo:before {
   color: #cccccc;
 }
 
+.application_first_screen {
+  padding-bottom: 350px;
+  background: repeating-linear-gradient(45deg, #1e1e1e, #1e1e1e 2px, #1a1a1a 2px, #1a1a1a 5px);
+}
+.application_first_screen .container {
+  max-width: 850px;
+}
+.application_first_screen .first_screen__subtitle {
+  margin-bottom: 28px;
+}
+.application_first_screen:before, .application_first_screen:after {
+  display: none;
+}
+
+.application_first_screen__text {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #cccccc;
+}
+
+.application_form_section {
+  margin-top: -300px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 60px;
+}
+.application_form_section p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #cccccc;
+}
+.application_form_section .container {
+  background: #262836;
+}
+.application_form_section .application_form__title {
+  color: #fff;
+  margin: 60px 0 35px;
+  padding: 0 0 18px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 43px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+.application_form_section .application_form__title:first-child {
+  margin: 0px 0 35px;
+}
+.application_form_section .application_form__title:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 6px;
+  bottom: -6px;
+  left: calc(100% - 70px);
+  background: #fff;
+  background: linear-gradient(-55deg, transparent 10px, #fff 0) bottom right, linear-gradient(55deg, transparent 10px, #fff 0) bottom left;
+  background-repeat: repeat, repeat;
+  background-size: auto, auto;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.application_form {
+  padding: 30px 50px 80px;
+}
+.application_form .check {
+  padding-left: 27px;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #cccccc;
+  margin-bottom: 20px;
+  position: relative;
+}
+.application_form .check .check__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-right: 17px;
+  position: absolute;
+}
+.application_form .check .check__input:checked + .check__box {
+  background: url("../img/chek.svg") 0 0/contain no-repeat;
+}
+.application_form .check .check__input:hover + .check__box {
+  -webkit-box-shadow: 0 0 2px rgba(103, 85, 42, 0.72);
+          box-shadow: 0 0 2px rgba(103, 85, 42, 0.72);
+}
+.application_form .check .check__box {
+  margin: 0 17px 0 0;
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../img/unchek.svg") 0 0/contain no-repeat;
+}
+.application_form .application_form__row {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+}
+.application_form .application_form__row input {
+  background: #262836;
+  color: #cccccc;
+  margin: 0 0 30px 0;
+  display: block;
+  width: 47%;
+  height: 40px;
+  padding: 11px 20px;
+  border: 1px solid #383b51;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+}
+.application_form .application_form__row select {
+  background: #262836;
+  font-family: inherit;
+  color: rgba(204, 204, 204, 0.6);
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 0 30px 0;
+  display: block;
+  width: 47%;
+  height: 40px;
+  padding: 11px 16px;
+  border: 1px solid #383b51;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+}
+.application_form .application_form__row select:after {
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 7px;
+  background: url("../img/form_arrow.svg") 0 0/contain no-repeat;
+  z-index: 3;
+}
+.application_form .application_form__row select input {
+  margin: 0 0 10px;
+}
+.application_form .application_form__row_1 {
+  width: 100%;
+}
+.application_form .application_form__row_1 input {
+  width: 30%;
+}
+.application_form .application__item {
+  margin: 0 0 30px;
+  padding: 0 0 0 50px;
+  position: relative;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+.application_form .application__item p {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.application_form .application__item:before {
+  content: "01";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.application_form .application__item:nth-child(2):before {
+  content: "02";
+}
+.application_form .application__item:nth-child(3):before {
+  content: "03";
+}
+.application_form .application__item:nth-child(4):before {
+  content: "04";
+}
+.application_form .application__item:nth-child(5):before {
+  content: "05";
+}
+.application_form .name {
+  background: #262836;
+  color: #cccccc;
+  margin: 0 0 30px 0;
+  display: block;
+  width: 47%;
+  height: 40px;
+  padding: 11px 20px;
+  border: 1px solid #383b51;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+}
+.application_form .submit__button {
+  margin-top: 60px;
+}
+
 footer {
   padding: 35px 0 8px;
   background-color: #1a1a1a;
@@ -4181,6 +4397,10 @@ footer {
   .reddy {
     padding: 0 20px;
   }
+
+  .application_form_section {
+    padding: 0 20px 60px;
+  }
 }
 @media (max-width: 1000px) {
   .first_row {
@@ -4263,6 +4483,17 @@ footer {
 
   .support_faq .main_content__item {
     margin: 0 30px 0 0;
+  }
+
+  .application_form .application_form__row {
+    width: 70%;
+  }
+
+  .application_form .application_form__row_1 {
+    width: 100%;
+  }
+  .application_form .application_form__row_1 input {
+    width: 47%;
   }
 }
 @media (max-width: 850px) {
@@ -4480,6 +4711,17 @@ footer {
   .requirements .requirements__row .latest_articles__list {
     max-width: 100%;
   }
+
+  .application_form .application_form__row {
+    width: 80%;
+  }
+
+  .application_form .application_form__row_1 {
+    width: 100%;
+  }
+  .application_form .application_form__row_1 input {
+    width: 47%;
+  }
 }
 @media (max-width: 700px) {
   .blog_updates__row {
@@ -4539,6 +4781,21 @@ footer {
     width: 100%;
     margin: 0 0 15px;
   }
+
+  .application_form .application_form__row {
+    width: 100%;
+  }
+
+  .application_form .application_form__row_1 {
+    width: 100%;
+  }
+  .application_form .application_form__row_1 input {
+    width: 47%;
+  }
+
+  .application_form .name {
+    width: 100%;
+  }
 }
 @media (max-width: 650px) {
   .request_form__row_1 {
@@ -4597,6 +4854,20 @@ footer {
   }
   .faq .spoller__title span {
     margin-right: 10px;
+  }
+
+  .application_form .application_form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .application_form .application_form__row input {
+    width: 100%;
+  }
+
+  .application_form .application_form__row_1 input {
+    width: 100%;
   }
 }
 @media (max-width: 600px) {
@@ -4725,6 +4996,10 @@ footer {
   .request_form .request_form__row select {
     width: 100%;
   }
+
+  .application_form {
+    padding: 30px 20px 80px;
+  }
 }
 @media (max-width: 500px) {
   header .burger__menu .first_row {
@@ -4827,6 +5102,41 @@ footer {
 
   .request_form {
     padding: 30px 0px 80px;
+  }
+
+  .application_form {
+    padding: 30px 10px 80px;
+  }
+
+  .blog_first_screen__title {
+    font-size: 35px;
+  }
+
+  .first_screen__subtitle {
+    font-size: 20px;
+  }
+
+  .application_form_section .application_form__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .application_form .application__item {
+    margin: 0 0 15px;
+    padding: 0 0 0 35px;
+  }
+
+  .application_form .application__item::before {
+    font-size: 20px;
+  }
+
+  .application_form .application__item p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 470px) {
+  .application_form .check .check__box {
+    top: calc(50% - 10px);
   }
 }
 @media (max-width: 400px) {
@@ -5014,6 +5324,14 @@ footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+
+  .application_form {
+    padding: 30px 0px 80px;
+  }
+
+  .application_form_section .container {
+    padding: 0 10px;
   }
 }
 @media (max-width: 373px) {
