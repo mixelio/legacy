@@ -1721,7 +1721,12 @@ body {
   align-items: center;
   border-bottom: 1px solid #383b51;
 }
-
+.tab_body {
+  display: none;
+  &._active {
+    display: block;
+  }
+}
 .select_game__subitem {
   color: #fff;
   padding: 0 0 0 30px;

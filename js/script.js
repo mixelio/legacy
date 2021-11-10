@@ -141,8 +141,28 @@ if (social1) {
   });
 }
 
-$(".select_game__item").click(function(e) {
-  e.preventDefault();
-  $(".select_game__item").removeClass("_active");
-  $(this).addClass("_active");
+const tabs = document.querySelectorAll(".select_game__item");
+const tabsItems = document.querySelectorAll(".tab_body");
+
+tabs.forEach(function(item) {
+  item.addEventListener("click", function(e) {
+    e.preventDefault();
+    let tabActive = item;
+    let tabId = tabActive.getAttribute("data-tab");
+    let tabActiveContent = document.querySelector(tabId);
+    tabs.forEach(function(item) {
+      item.classList.remove("_active");
+    });
+    tabsItems.forEach(function(item) {
+      item.classList.remove("_active");
+    });
+    tabActive.classList.add("_active");
+    tabActiveContent.classList.add("_active");
+  });
 });
+
+// $(".select_game__item").click(function(e) {
+//   e.preventDefault();
+//   $(".select_game__item").removeClass("_active");
+//   $(this).addClass("_active");
+// });

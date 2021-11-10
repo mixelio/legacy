@@ -3344,6 +3344,13 @@ body._lock {
   border-bottom: 1px solid #383b51;
 }
 
+.tab_body {
+  display: none;
+}
+.tab_body._active {
+  display: block;
+}
+
 .select_game__subitem {
   color: #fff;
   padding: 0 0 0 30px;
