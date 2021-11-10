@@ -39,9 +39,15 @@
   .application_form_section {
     padding: 0 20px 60px;
   }
+  .header__follow_row {
+    right: 6%;
+  }
 }
 
 @media (max-width: 1000px) {
+  .header__follow_row {
+    right: 0;
+  }
   .first_row {
     padding: 9px 60px;
   }
@@ -572,6 +578,14 @@
       }
     }
   }
+
+  .header__follow_row_1 {
+    bottom: -9%;
+    &._active {
+      bottom: -19%;
+    }
+  }
+
   .header__logo {
     width: 50%;
   }

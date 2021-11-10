@@ -1623,6 +1623,7 @@ body {
   .select_game__item_1,
   .select_game__item_2,
   .select_game__item_3 {
+    cursor: pointer;
     overflow: hidden;
     display: block;
     margin: 0 50px 0 0;
@@ -1636,6 +1637,32 @@ body {
     transition: all 500ms ease;
     position: relative;
     z-index: 2;
+    &._active {
+      color: #fff;
+      background: rgba(#1e1d1f, 0);
+      &:after {
+        opacity: 1;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(#67552a, 1),
+        rgba(#7a6228, 1),
+        rgba(#67552a, 1)
+      );
+      transition: all 500ms ease;
+    }
+
     &:last-child {
       margin: 0;
     }

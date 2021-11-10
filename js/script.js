@@ -120,67 +120,29 @@ if (iconMenu) {
   });
 }
 
-$(function() {
-  // открываем вкладку по умолчанию
+const social = document.querySelector(".header_social__slide");
 
-  $(".support_faq__spoller_item .spoller__text").slideUp();
-  $(".active__item .spoller__text").slideDown();
+const socialRow = document.querySelector(".header__follow_row");
 
-  $("#accordion .spoller__title").on("click", function() {
-    $("#accordion .spoller__text")
-      .not($(this).next())
-      .slideUp(299);
-
-    $(".support_faq__spoller_item").removeClass("active__item");
-    $(this)
-      .next()
-      .slideDown(299)
-      .parent()
-      .addClass("active__item");
-  });
-});
-
-$(function() {
-  // открываем вкладку по умолчанию
-
-  $(".partners_faq__spoller_item .spoller__text").slideUp();
-  $(".active__item .spoller__text").slideDown();
-
-  $("#accordion .spoller__title").on("click", function() {
-    $("#accordion .spoller__text")
-      .not($(this).next())
-      .slideUp(299);
-
-    $(".partners_faq__spoller_item").removeClass("active__item");
-    $(this)
-      .next()
-      .slideDown(299)
-      .parent()
-      .addClass("active__item");
-  });
-});
-
-$(function() {
-  var reCaptchaWidth = 302;
-  var containerWidth = $(".capture_box").width();
-  if (reCaptchaWidth > containerWidth) {
-    var reCaptchaScale = containerWidth / reCaptchaWidth;
-    $(".g-recaptcha").css({
-      transform: "scale(" + reCaptchaScale + ")",
-      "transform-origin": "left top"
-    });
-  }
-});
-
-const play = document.querySelector(".play");
-const video = document.querySelector(".content__video");
-const playActive = document.querySelector("._playActive");
-const playStop = document.querySelector(".playStop");
-
-if (!playActive) {
-  play.addEventListener("click", function(e) {
-    play.classList.add("_playActive");
-    video.setAttribute("autoplay", "");
-    video.setAttribute("controls", "");
+if (social) {
+  social.addEventListener("click", function(e) {
+    social.classList.toggle("_active");
+    socialRow.classList.toggle("_active");
   });
 }
+
+const social1 = document.querySelector(".header_social__slide_1");
+const socialRow1 = document.querySelector(".header__follow_row_1");
+
+if (social1) {
+  social1.addEventListener("click", function(e) {
+    social1.classList.toggle("_active");
+    socialRow1.classList.toggle("_active");
+  });
+}
+
+$(".select_game__item").click(function(e) {
+  e.preventDefault();
+  $(".select_game__item").removeClass("_active");
+  $(this).addClass("_active");
+});

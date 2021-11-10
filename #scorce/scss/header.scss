@@ -6,51 +6,51 @@ header {
     border-right: 1px solid #323232;
     padding: 0;
   }
-  .burger__menu {
-    display: none;
+}
+.burger__menu {
+  display: none;
+  position: absolute;
+  width: calc(100% - 35px);
+  top: 65px;
+  left: -100%;
+  background-color: #1a1a1a;
+  //padding: 10px 10px 15px;
+  z-index: 6;
+  transition: all 500ms ease-in-out;
+  &._active {
+    left: 0;
+  }
+  .first_row {
     position: absolute;
-    width: calc(100% - 35px);
-    top: 65px;
-    left: -100%;
-    background-color: #1a1a1a;
-    //padding: 10px 10px 15px;
-    z-index: 6;
-    transition: all 500ms ease-in-out;
-    &._active {
-      left: 0;
-    }
-    .first_row {
-      position: absolute;
-      background: #1a1a1a;
-      background: linear-gradient(-45deg, transparent 10px, #1e1e1e 0);
-      border-bottom: none;
-      transition: all 0.6s ease-in-out;
-    }
-    .header_navigation {
-      transition: all 0.7s ease-in-out;
-      background: linear-gradient(-45deg, transparent 15px, #1e1e1e 0);
-      position: absolute;
-      width: 90%;
-      top: 31px;
-      .header__list {
-        justify-content: center;
-        .header__item {
-          margin: 0 30px 0 0;
-          &:last-child {
-            margin: 0;
-          }
+    background: #1a1a1a;
+    background: linear-gradient(-45deg, transparent 10px, #1e1e1e 0);
+    border-bottom: none;
+    transition: all 0.6s ease-in-out;
+  }
+  .header_navigation {
+    transition: all 0.7s ease-in-out;
+    background: linear-gradient(-45deg, transparent 15px, #1e1e1e 0);
+    position: absolute;
+    width: 90%;
+    top: 31px;
+    .header__list {
+      justify-content: center;
+      .header__item {
+        margin: 0 30px 0 0;
+        cursor: pointer;
+        &:last-child {
+          margin: 0;
         }
-        .header__block {
-          margin: 0 30px 0 0;
-          &:last-child {
-            margin: 0;
-          }
+      }
+      .header__block {
+        margin: 0 30px 0 0;
+        &:last-child {
+          margin: 0;
         }
       }
     }
   }
 }
-
 .menu__icon {
   display: none;
   z-index: 7;
@@ -231,6 +231,7 @@ header {
 
 .header_navigation {
   padding: 17px 150px;
+  position: relative;
 }
 
 .header__list {
@@ -239,6 +240,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 4;
 }
 
 .header__block {
@@ -246,6 +249,7 @@ header {
   display: -ms-flex;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .header__item {
@@ -257,7 +261,6 @@ header {
   text-transform: uppercase;
   color: #fff;
   position: relative;
-
   &:last-child {
     margin: 0;
   }
@@ -277,5 +280,101 @@ header {
   &:hover:before {
     opacity: 1;
     transform: scaleX(1);
+  }
+  &._active {
+    &:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      bottom: -17px;
+      left: 0;
+      background-color: #67552a;
+      width: 100%;
+      height: 4px;
+      transition: all 200ms ease-in-out;
+    }
+  }
+}
+
+.header__follow_row,
+.header__follow_row_1 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  bottom: -35%;
+  transform: scaleY(0);
+  opacity: 0.5;
+  z-index: 3;
+  right: 9%;
+  max-width: calc(124px * 4 + 5px);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202027;
+  border: 1px solid #ffffff;
+  z-index: 3;
+  transition: all 200ms ease-in-out;
+  &._active {
+    bottom: -85%;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  .header__follow_item {
+    height: 40px;
+    width: 115px;
+    border-right: 1px solid #ffffff;
+    &:last-child {
+      border: none;
+    }
+  }
+  img {
+    position: absolute;
+    transition: all 200ms ease-in-out;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .header__twitter {
+    img {
+      height: 20px;
+      width: 25px;
+      top: calc(50% - 10px);
+      left: calc(50% - 12.5px);
+    }
+    @include followslowhover;
+  }
+
+  .header__tiktok {
+    img {
+      height: 25px;
+      width: 22px;
+      top: calc(50% - 12.5px);
+      left: calc(50% - 11px);
+    }
+    @include followslowhover;
+  }
+  .header__youtube {
+    img {
+      height: 17px;
+      width: 25px;
+      top: calc(50% - 8.5px);
+      left: calc(50% - 12.5px);
+    }
+    @include followslowhover;
+  }
+
+  .header__little_bot {
+    img {
+      height: 25px;
+      width: 25px;
+      top: calc(50% - 12.5px);
+      left: calc(50% - 12.5px);
+    }
+    @include followslowhover;
   }
 }
