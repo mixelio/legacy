@@ -5258,6 +5258,8 @@ footer {
 
   .header__follow_row_1 {
     bottom: -9%;
+    left: 0;
+    right: auto;
   }
   .header__follow_row_1._active {
     bottom: -19%;
